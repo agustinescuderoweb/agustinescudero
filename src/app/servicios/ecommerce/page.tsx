@@ -17,11 +17,11 @@ import { Check } from "lucide-react";
 
 const testimoniosData = [
   {
-    texto: '"Realmente muy conforme, creo mi tienda de ropa conforme a mis gustos, muy satisfecha"',
+    texto: '"Creo mi landing page de mi tienda de maquillaje, excelente trabajo mejoro mi performance"',
     nombre: 'Ariadna Escudero',
   },
   {
-    texto: '"Creo mi landing page de mi tienda de maquillaje, excelente trabajo mejoro mi performance"',
+    texto: '"Realmente muy conforme, creo mi tienda de ropa conforme a mis gustos, muy satisfecha"',
     nombre: 'Camila Escudero',
   },
   {

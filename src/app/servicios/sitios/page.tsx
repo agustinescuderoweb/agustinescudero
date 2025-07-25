@@ -17,11 +17,11 @@ import { Check } from "lucide-react";
 
 const testimoniosData = [
   {
-    texto: '"Realmente muy conforme, creo mi tienda de ropa conforme a mis gustos, muy satisfecha"',
+    texto: '"Creo mi landing page de mi tienda de maquillaje, excelente trabajo mejoro mi performance"',
     nombre: 'Ariadna Escudero',
   },
   {
-    texto: '"Creo mi landing page de mi tienda de maquillaje, excelente trabajo mejoro mi performance"',
+    texto: '"Realmente muy conforme, creo mi tienda de ropa conforme a mis gustos, muy satisfecha"',
     nombre: 'Camila Escudero',
   },
   {
@@ -83,10 +83,10 @@ function Page() {
              </button>
         </div>
         </div>
-        <div className='flex flex-col w-screen h-[1450px] bg-white justify-center text-center gap-6 items-center'> 
+        <div className='flex flex-col w-screen h-[1450px] md:h-[700px] bg-white justify-center text-center gap-6 items-center'> 
            <div className='text-4xl font-bold mt-6'><h1>Testimonios</h1></div>
            <div className='flex flex-row m-12 gap-12 justify-center'>
- <div className='flex flex-col gap-26'>
+ <div className='flex flex-col md:flex-row gap-26'>
   {/* Testimonio 1 */}
   <div className='w-[250px] h-[300px] bg-black rounded-lg flex flex-col items-center p-4 gap-4' style={{ boxShadow: '0 0px 20px rgba(0, 0, 0, 1)' }}  >
     <div className='flex gap-1'>
