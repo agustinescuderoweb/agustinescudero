@@ -37,12 +37,7 @@ const toggleMenu = () => {
       <div className={`${styles.items} ${isOpen ? styles.show : ''}`}>
         <Link href="/" className="text-black">Inicio</Link>
         <div className={styles.dropdown}>
-            <span className={styles.dropdownToggle}  onClick={(e) => {  if (!isDropdownOpen) { e.preventDefault(); } }}
-           >
-             <Link href="/servicios" className="text-black !no-underline cursor-pointer">
-               Servicios
-             </Link>
-           </span>
+          <span className={styles.dropdownToggle} onClick={toggleDropdown}><Link href="/servicios" className="text-black !no-underline">Servicios</Link></span>
               <div className={`${styles.dropdownMenu} ${isDropdownOpen ? styles.dropdownVisible : ''}`}>
                 <Link href="/servicios/landing" className="!no-underline"><h1 className="text-white sm:text-black">Landing Page</h1></Link>
                 <Link href="/servicios/sitios" className="!no-underline"><h1  className="text-white sm:text-black">Sitios Web</h1></Link>

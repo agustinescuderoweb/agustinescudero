@@ -153,9 +153,8 @@
     }
 
     .dropdown:hover .dropdownMenu {
-    display: flex;
+    display: none;
     }
-
     .dropdownToggle:active + .dropdownMenu,
     .dropdownToggle:focus + .dropdownMenu {
     display: block;
