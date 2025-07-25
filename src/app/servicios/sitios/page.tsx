@@ -1,6 +1,7 @@
 'use client'
 
-import React, { useEffect } from 'react';
+import React from 'react';
+import { useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image'
 import Menu from '@/app/componetes/inicio/menu'
@@ -31,7 +32,7 @@ const testimoniosData = [
 
 
 
-function page() {
+function Page() {
 
   useEffect(() => {
   AOS.init({ once: true, duration: 800 });
@@ -134,4 +135,4 @@ function page() {
   )
 }
 
-export default page
+export default Page
