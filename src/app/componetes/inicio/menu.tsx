@@ -27,7 +27,7 @@ const toggleMenu = () => {
       <div className={styles.header}>
         {!isOpen && (
           <div className={styles.logoContainer}>
-            <a href="/"><Image className={styles.logo} src={agus} width={100} alt="Logo" /></a>
+            <Link href="/"><Image className={styles.logo} src={agus} width={100} alt="Logo" /></Link>
           </div>
         )}
         <button className={`${styles.menuButton} ${isOpen ? styles.menuButtonOpen : ''}`} onClick={toggleMenu}>

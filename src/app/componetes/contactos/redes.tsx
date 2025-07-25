@@ -4,7 +4,6 @@ import styles from '@/componentes/contactos/redes.module.css'
 import whatsaap from '../../../public/icon/whatsaap.svg';
 import instagram from '../../../public/icon/instagram.svg';
 import youtube from '../../../public/icon/youtube.svg'
-import mail from '../../../public/icon/mail.svg';
 
 function redes() {
   return (

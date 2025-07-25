@@ -1,6 +1,7 @@
 'use client'
 
 import React, { useEffect } from 'react';
+import Link from 'next/link';
 import Image from 'next/image'
 import Menu from '@/app/componetes/inicio/menu'
 import Footer from '@/app/componetes/inicio/footer'
@@ -44,7 +45,7 @@ function page() {
           <p className='text-[#737373] w-[80%]'>Una landing page (o página de aterrizaje) es una página web diseñada con un solo objetivo específico: convertir visitantes en acciones concretas, como: dejar sus datos, realizar una compra, registrarse a un evento, descargar algo, o agendar una llamada.</p>
           <button className="relative group bg-[rgb(50,205,50)] text-white px-6 py-3 text-base font-bold rounded-md overflow-hidden transition-transform duration-300 ease-in-out hover:scale-105">
           <span className="pointer-events-none absolute -left-full top-1/2 w-full h-full -translate-y-1/2 rotate-[-45deg] bg-white opacity-0 transition-all duration-500 ease-in-out group-hover:left-full group-hover:opacity-100"></span>
-          <a href='https://wa.link/elp2e3' className="relative z-10">Pedí tu Servicio</a>
+          <Link href='https://wa.link/elp2e3' className="relative z-10">Pedí tu Servicio</Link>
           </button>
 
           </div>
@@ -119,7 +120,7 @@ function page() {
          </div>
          <button className="relative group bg-[rgb(50,205,50)] text-white  w-[200px] px-6 py-3 text-base font-bold rounded-md overflow-hidden transition-transform duration-300 ease-in-out hover:scale-105">
          <span className="pointer-events-none absolute -left-full top-1/2 w-[100px] h-full -translate-y-1/2 rotate-[-45deg] bg-white opacity-0 transition-all duration-500 ease-in-out group-hover:left-full group-hover:opacity-100"></span>
-         <a href='https://wa.link/elp2e3' className="relative z-10">Pedí tu Servicio</a>
+         <Link href='https://wa.link/elp2e3' className="relative z-10">Pedí tu Servicio</Link>
          </button>
     </div>
       <Footer />
