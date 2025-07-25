@@ -1,0 +1,68 @@
+.contactos {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    color: white;
+
+}
+
+.contactos h1 {
+    font-family: "Kanit", sans-serif;
+    font-style: normal;
+    font-size: 26px;
+    color: white;
+}
+
+.contactos h2 {
+    font-family: "Open Sans", sans-serif;
+    font-size: 16px;
+    color: white;
+}
+
+.icon {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 10px;
+    color: black;
+}
+
+.icons {
+    width: 25px;
+    margin: 10px;
+    color: black;
+}
+
+
+@media screen and (max-width: 768px) {
+    .contactos{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-top: 0;
+    }
+
+    .contactos h1 {
+        font-size: 24px;
+    }
+
+    .contactos h2 {
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .contactos {
+         height: 200px;
+    }
+
+    
+    .contactos h1 {
+        font-weight: 800;
+    }
+}

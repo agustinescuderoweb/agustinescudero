@@ -1,0 +1,128 @@
+.contenedor {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: #737373;
+    color: white;
+    padding: 20px;
+    padding-bottom: 80px;
+    gap: 50px;
+}
+
+.contenido {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 60px;
+}
+
+.contenido h1 {
+    font-size: 36px;
+    font-weight: 800;
+}
+
+.contenido h2 {
+    font-size: 24px;
+}
+
+.contenido h3 {
+    font-size: 16px;
+}
+
+
+.imagenes {
+    position: relative;
+    width: 500px;
+    height: 330px;
+    box-shadow: 0px 0px 5px white;
+    overflow: hidden;
+}
+
+.desarrollos {
+    width: 100%;
+    height: 100%;
+    display: block;
+    transition: opacity 0.7s ease-in-out;
+}
+
+.desarrollos:hover {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.7s ease-in-out;
+}
+
+.git:hover .desarrollos:hover {
+    opacity: 1;
+}
+
+.git:hover .desarrollos {
+    opacity: 0;
+}
+
+.button {
+    position: relative;
+    background: rgb(50, 205, 50);
+    color: white;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+  
+  .button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -100%;
+    width: 200%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.93);
+    transform: rotate(-45deg);
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  .button:hover::before {
+    left: 100%;
+    opacity: 1; /* Aparece el flash */
+  }
+  
+  .buttonbutton:hover {
+    transform: scale(0.5); /* Amplía ligeramente el botón */
+  }
+  
+@media screen and (max-width: 768px) {
+    .contenedor  {
+        width: 100%;
+        height: 900px;
+        padding-bottom: 100px;
+    }
+
+    .contenido h1 {
+        font-size: 36px;
+    }
+
+    .contenido h2 {
+        font-size: 22px;
+    }
+    
+    .contenidoh3 {
+        font-size: 13px;
+    }
+
+    .imagenes {
+        width: 100%;
+        height: 245px;
+    }
+
+}

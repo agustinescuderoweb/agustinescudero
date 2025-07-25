@@ -1,0 +1,141 @@
+.contenedor {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+    padding: 80px;
+    box-shadow: 0px 0px 20px white;
+    gap: 70px;
+}
+
+.correo {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 500px;
+    margin: 50px 70px;
+}
+
+.correo h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+    font-weight: 800;
+    color: white;
+}
+
+.correo h2 {
+    font-size: 20px;
+    color: white;
+}
+
+
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #737373;
+    align-items: center;
+    gap: 30px;
+    margin-top: 100px;
+    box-shadow: 0px 0px 20px white;
+    width: 400px;
+    height: 500px;
+    margin: 20px;
+    padding-top: 50px;
+    color: white;
+    border-radius: 3%;
+    border: 0.2px solid white;
+}
+
+.form textarea {
+    width: 300px;
+    height: 150px;
+    background-color: white;
+}
+
+.name {
+    border-radius: 20px;
+    font-weight: bold;
+    padding: 10px;
+    color: black;
+    background-color: white;
+}
+
+.email {
+    border-radius: 20px;
+    font-weight: bold;
+    padding: 10px;
+    color:  black;
+    background-color: white;
+}
+
+.mensaje {
+    border-radius: 20px;
+    font-weight: bold;
+    color: black; 
+    padding: 10px;
+    background-color: white;
+}
+
+.button {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background: rgb(50, 205, 50);
+    border: none;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .button:hover {
+     background: rgb(50, 205, 50);;
+  }
+  
+  .button::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.4);
+    transform: translateX(-100%) rotate(45deg);
+    transition: transform 0.6s ease;
+  }
+  
+  .button:hover::before {
+    transform: translateX(100%) rotate(45deg);
+  }
+  
+
+@media screen and (max-width: 768px) {
+    .contenedor {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin-top: 0;
+        padding: 0;
+        gap: 0;
+        padding-bottom: 50px;
+
+    }
+
+    .correo {
+        width: 100%;
+        padding: 0px 20px;
+    }
+}
+
+@media screen and (max-width: 550px) { 
+
+    .form { 
+        width: 330px;
+    }
+}

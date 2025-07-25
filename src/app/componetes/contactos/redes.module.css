@@ -1,0 +1,14 @@
+
+.icon {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+    height: 150px;
+    margin-top: 100px;
+}
+
+.icons {
+    width: 25px;
+    margin: 10px;
+}

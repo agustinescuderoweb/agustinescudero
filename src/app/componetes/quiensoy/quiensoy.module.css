@@ -1,0 +1,82 @@
+.quien {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    padding: 50px 20px 50px 20px;
+    gap: 80px;
+}
+
+.quiensoy {
+    width: 400px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.quiensoy h3 {
+    border: 2px solid black;
+    width: 100px;
+    padding: 5px;
+    border-radius: 20px;
+    margin-bottom: 16px;
+    background-color: gray;
+    color: white;
+}
+
+.quiensoy h1 {
+    font-size: 26px;
+    margin-bottom: 16px;
+    font-weight: 800;
+}
+
+.quiensoy p {
+    width: 400px;
+    justify-content: center;
+    font-size: 16px;
+    color: white;
+}
+
+.imagen {
+    width: 350px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px white;
+
+}
+
+.agustin {
+    box-shadow: 0px 0px 10px black;
+}
+
+
+@media screen and (max-width: 760px) {
+
+    .quien {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .quiensoy {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .quiensoy p {
+        width: 85%;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+}

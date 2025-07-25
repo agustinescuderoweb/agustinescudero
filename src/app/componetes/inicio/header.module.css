@@ -1,0 +1,212 @@
+.espacio{
+  background-size: 100%;
+  animation: glow 6s ease-in-out infinite;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  width: 100%;
+  position: relative;
+}
+
+.videoFondo {
+  position: absolute; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* 👈 Color negro con 40% de opacidad */
+  z-index: -1;
+}
+
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    color: white;
+    gap: 150px;
+    position: relative;
+    margin-left: 100px;
+    z-index: 1;
+}
+
+.contenido {
+  display: flex;
+  flex-direction: row;
+  gap: 80px;
+  margin-top: 100px;
+}
+
+.text {
+  margin: 70px;
+}
+
+.text h1 {
+  font-family: "Kanit", sans-serif;
+  font-style: normal;
+  font-size: 34px;
+  font-weight: 600;
+  margin-bottom: 24px;
+}
+
+.text h2 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 21px;
+  margin-bottom: 24px;
+}
+
+
+.button {
+    font-family: "Open Sans", sans-serif;
+    position: relative;
+    background: rgb(50, 205, 50);
+    color: white;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+  }
+  
+  .button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: -100%;
+    width: 200%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.93);
+    transform: rotate(-45deg);
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+    pointer-events: none;
+  }
+  
+  .button:hover::before {
+    left: 100%;
+    opacity: 1; /* Aparece el flash */
+  }
+  
+  .buttonbutton:hover {
+    transform: scale(0.5); /* Amplía ligeramente el botón */
+  }
+  
+  .button a {
+    color:white;
+    text-decoration: none;
+  }
+
+.contenedor h3 {
+    font-size: 16px;
+    margin-bottom: 8px;
+}
+
+
+@media screen and (max-width: 768px) {
+  .espacio {
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    justify-content: center;
+    background-size: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .contenedor {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    margin: 0;
+  }
+
+  .contenido {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+   margin: 0;
+  }
+
+
+.logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  margin: 0;
+}
+
+
+.logo {
+  margin: 0;
+  border-radius: 50%;
+  box-shadow: 0px 0px 10px black;
+}
+  
+
+  .text {
+    padding: 60px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .text h1 {
+    font-size: 24px;
+  }
+
+  .text h2 {
+    font-size: 14px;
+  }
+
+  .button {
+    font-size: 12px;
+  }
+
+  .imagen {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 550px) {
+
+  .espacio {
+    margin: 0;
+    height: 95vh;
+  }
+
+  .contenido {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .text {
+    padding: 0;
+  }
+
+}
