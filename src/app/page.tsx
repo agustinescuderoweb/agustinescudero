@@ -24,7 +24,7 @@ function Page() {
       <JsonLd />
       <Menu />
       <Header />
-      <Chatn8n webhookUrl="https://n8n-oz3s.onrender.com/chat/MgQWhqPySE5bfqwb" />
+      <Chatn8n webhookUrl="https://n8n-oz3s.onrender.com/webhook/3579c138-48ac-4200-ac9e-dc74df06241f/chat" />
       <Footer />
     </>
   )
