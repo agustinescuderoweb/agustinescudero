@@ -18,7 +18,7 @@ const Chatn8n = ({ webhookUrl }: Chatn8nProps) => {
         webhookUrl: "https://n8n-oz3s.onrender.com/chat/MgQWhqPySE5bfqwb",
         webhookConfig: { method: 'POST', headers: {} },
         target: '#n8n-chat',
-        mode: 'embedded', // o 'embedded' si querés incrustado
+        mode: 'window', // o 'embedded' si querés incrustado
         chatInputKey: 'chatInput',
         chatSessionKey: 'sessionId',
         loadPreviousSession: true,
