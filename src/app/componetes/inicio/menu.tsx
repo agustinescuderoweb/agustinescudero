@@ -23,11 +23,12 @@ const toggleMenu = () => {
 
 
   return (
-    <div className={styles.contenedor}>
+    <nav className={styles.contenedor} aria-label="Menú principal de navegación">
       <div className={styles.header}>
         {!isOpen && (
           <div className={styles.logoContainer}>
-            <Link href="/"><Image className={styles.logo} src={agus} width={100} alt="Logo" /></Link>
+             <h1 className="sr-only">Agustín Escudero Web</h1> 
+            <Link href="/"><Image className={styles.logo} src={agus} width={100} alt="Logo de Agustín Escudero, desarrollador web en Mendoza" /></Link>
           </div>
         )}
         <button className={`${styles.menuButton} ${isOpen ? styles.menuButtonOpen : ''}`} onClick={toggleMenu}>
@@ -35,19 +36,19 @@ const toggleMenu = () => {
         </button>
       </div>
       <div className={`${styles.items} ${isOpen ? styles.show : ''}`}>
-        <Link href="/" className="text-black">Inicio</Link>
+        <Link href="/" className="text-black" title="Ir al inicio">Inicio</Link>
         <div className={styles.dropdown}>
-          <span className={styles.dropdownToggle} onClick={toggleDropdown}><Link href="/servicios" className="text-black !no-underline">Servicios</Link></span>
+          <span className={styles.dropdownToggle} onClick={toggleDropdown}><Link href="/servicios" className="text-black !no-underline" title="Ver servicios">Servicios</Link></span>
               <div className={`${styles.dropdownMenu} ${isDropdownOpen ? styles.dropdownVisible : ''}`}>
-                <Link href="/servicios/landing" className="!no-underline"><h1 className="text-white sm:text-black">Landing Page</h1></Link>
-                <Link href="/servicios/sitios" className="!no-underline"><h1  className="text-white sm:text-black">Sitios Web</h1></Link>
-                <Link href="/servicios/ecommerce" className="!no-underline"><h1  className="text-white sm:text-black">Ecommerce</h1></Link>
+                <Link href="/servicios/landing" className="!no-underline"><h3 className="text-white sm:text-black">Landing Page</h3></Link>
+                <Link href="/servicios/sitios" className="!no-underline"><h3  className="text-white sm:text-black">Sitios Web</h3></Link>
+                <Link href="/servicios/ecommerce" className="!no-underline"><h3  className="text-white sm:text-black">Ecommerce</h3></Link>
             </div>
         </div>
-        <Link href="/quiensoy" className="text-black !no-underline">¿Quién Soy?</Link>
-        <Link href="/contactos" className="text-black !no-underline">Contactos</Link>
+        <Link href="/quiensoy" className="text-black !no-underline" title="Conocer quién soy">¿Quién Soy?</Link>
+        <Link href="/contactos" className="text-black !no-underline" title="Formulario de contacto">Contactos</Link>
       </div>
-    </div>
+    </nav>
   );
 }
 

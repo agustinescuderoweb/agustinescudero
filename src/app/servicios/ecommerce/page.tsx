@@ -14,6 +14,8 @@ import star from '../../../../public/star.svg'
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { Check } from "lucide-react";
+import Head from 'next/head';
+
 
 const testimoniosData = [
   {
@@ -40,53 +42,107 @@ function Page() {
 
   return (
     <div>
+      <Head>
+        <title>E-Commerce Profesional | Agustín Escudero</title>
+        <meta
+          name="description"
+          content="Crea tu tienda online profesional para vender productos, automatizar ventas y expandir tu negocio sin límites. Diseño personalizado, pago seguro y atención 24/7."
+        />
+        <meta
+          name="keywords"
+          content="ecommerce, tienda online, ventas online, carrito de compra, pagos seguros, Agustín Escudero"
+        />
+        <meta property="og:title" content="E-Commerce Profesional | Agustín Escudero" />
+        <meta
+          property="og:description"
+          content="Diseño y desarrollo de tiendas online que potencian tus ventas y automatizan tu negocio con seguridad y estilo profesional."
+        />
+        <meta property="og:image" content="https://agustinescuderoweb.com/logo.png" />
+        <meta property="og:url" content="https://agustinescuderoweb.com/servicios/ecommerce" />
+        <meta name="twitter:card" content="summary_large_image" />
+      </Head>
+
       <Menu />
-      <div className="flex flex-col md:flex-row w-screen justify-between bg-black bg-opacity-30 text-center">
-          <div className='flex flex-col flex-[50%] justify-center items-center overflow-hidden gap-10 pt-12 pb-12'><h1 className="text-white text-4xl font-bold">E-COMMERCE</h1>
+      <main>
+      <section aria-label="Introducción al servicio de Ecommerce" className="flex flex-col md:flex-row w-screen justify-between bg-black bg-opacity-30 text-center">
+          <div className='flex flex-col flex-[50%] justify-center items-center overflow-hidden gap-10 pt-12 pb-12'><h1 className="text-white text-4xl font-bold">Desarrollo E-COMMERCE profesional</h1>
           <p className='text-[#737373] w-[80%]'>Un ecommerce es mucho más que una tienda online: es una herramienta poderosa para vender tus productos, automatizar tus ventas y hacer crecer tu negocio sin límites geográficos. Con una tienda virtual, podés mostrar tu catálogo, aceptar pagos de forma segura, recibir pedidos las 24 horas y brindar una experiencia profesional a tus clientes, desde cualquier lugar del mundo.</p>
           <button className="relative group bg-[rgb(50,205,50)] text-white px-6 py-3 text-base font-bold rounded-md overflow-hidden transition-transform duration-300 ease-in-out hover:scale-105">
           <span className="pointer-events-none absolute -left-full top-1/2 w-full h-full -translate-y-1/2 rotate-[-45deg] bg-white opacity-0 transition-all duration-500 ease-in-out group-hover:left-full group-hover:opacity-100"></span>
-          <Link href='https://wa.link/elp2e3' className="relative z-10">Pedí tu Servicio</Link>
+          <Link href='https://wa.link/elp2e3'  aria-label="Solicitar sitio web personalizado vía WhatsApp" className="relative z-10">Solicitá tu E-commerce personal</Link>
           </button>
 
           </div>
-          <div className='flex flex-[50%] flex justify-end items-center'><Image src={ecommerce} alt="Imagen Landing" className="flex opacity-50 w-[100%]"/></div>
-      </div>
-      <div className='flex flex-col h-[600px] text-center justify-center items-center'>
+          <div className='flex flex-[50%] flex justify-end items-center'><Image src={ecommerce} alt="Ejemplo de diseño para ecommerce profesional"className="flex opacity-50 w-[100%]"/></div>
+      </section>
+      <section aria-label="Beneficios del ecommerce" className='flex flex-col h-[600px] text-center justify-center items-center'>
 
-        <div className='flex flex-col mt-12 justify-center'><h1 className='text-4xl font-semibold'>✅Beneficios</h1>
-        <div data-aos="fade-up" className='w-[500px]  h-[50px] bg-[#737373] p-4 rounded flex items-center justify-center mt-16'><h2 className='text-lg text-white'>Ventas 24/7</h2></div>
-        <div data-aos="fade-up" data-aos-delay="100" className='w-[500px] h-[50px] bg-[#737373] p-4 rounded flex items-center justify-center mt-16'><h2 className='text-lg text-white'>Alcance ilimitado</h2></div>
-        <div  data-aos="fade-up" data-aos-delay="200" className='w-[500px]  h-[50px] bg-[#737373] p-4 rounded flex items-center justify-center mt-16'><h2 className='text-lg text-white'>Menores costos que un local físico</h2></div>
-        <div   data-aos="fade-up" data-aos-delay="300" className='w-[500px]  h-[50px] bg-[#737373] p-4 rounded flex items-center justify-center mt-16'><h2 className='text-lg text-white'>Integración con redes sociales</h2></div> 
-        </div>
-         </div>
+        <div className='flex flex-col mt-12 justify-center'><h2 className='text-4xl font-semibold'>✅Beneficios</h2>
+         <ul className="mt-10 space-y-6 max-w-xl">
+            {[
+              'Ventas 24/7',
+              'Alcance ilimitado',
+              'Menores costos que un local físico',
+              'Integración con redes sociales',
+            ].map((beneficio, idx) => (
+              <li
+                key={idx}
+                data-aos="fade-up"
+                data-aos-delay={idx * 100}
+                className="bg-[#737373] rounded p-4 text-white text-lg"
+              >
+                {beneficio}
+              </li>
+            ))}
+          </ul>
+          </div>
+         </section>
       
-        <div className='flex flex-col gap-16 mt-16 h-[1100px] md:h-[700px] bg-black justify-center items-center opacity-80'>
-                <div className='flex justify-center items-center'><h1 className='text-4xl text-white font-semibold'>💼¿Qué incluye?💼</h1></div>
+        <section aria-label="Características incluidas en el ecommerce" className='flex flex-col gap-16 mt-16 h-[1100px] md:h-[700px] bg-black justify-center items-center opacity-80'>
+                <div className='flex justify-center items-center'><h2 className='text-4xl text-white font-semibold'>💼¿Qué incluye?💼</h2></div>
                 <div className='flex flex-col gap-16 items-center justify-center'>
-                <div className='w-screen h-[700px] md:h-[350px] flex flex-col md:flex-row justify-center items-center gap-6 p-8 text-center'>
-                     <div className='flex flex-col gap-6  md:w-[500px] w-full'>
-                     <div className='flex flex-row justify-between items-center gap-2 bg-white p-5 rounded-lg shadow-[0_5px_20px_rgba(255,255,255,0.5)]'>< Check size={30} color='green'/><h1 className='mr-12'>Formulario de Contacto</h1></div> 
-                     <div className='flex flex-row justify-between items-center gap-2 bg-white p-5 rounded-lg shadow-[0_5px_20px_rgba(255,255,255,0.5)]'>< Check size={30} color='green'/><h1 className='mr-12'>Responsive Desingn</h1></div>
-                     <div className='flex flex-row justify-between items-center gap-2 bg-white p-5 rounded-lg shadow-[0_5px_20px_rgba(255,255,255,0.5)]'>< Check size={30} color='green'/><h1 className='mr-12'>Dominio Personalizado</h1></div> 
-                     <div className='flex flex-row justify-between items-center gap-2 bg-white p-5 rounded-lg shadow-[0_5px_20px_rgba(255,255,255,0.5)]'>< Check size={30} color='green'/><h1 className='mr-12'>Carrito de Compra</h1></div> 
-                     </div>
-                     <div className='flex flex-col gap-6  md:w-[500px] w-full'>
-                     <div className='flex flex-row justify-between items-center gap-2 bg-white p-5 rounded-lg shadow-[0_5px_20px_rgba(255,255,255,0.5)]'>< Check size={30} color='green'/><h1 className='mr-12'>Contacto a Redes Sociales</h1></div> 
-                     <div className='flex flex-row justify-between items-center gap-2 bg-white p-5 rounded-lg shadow-[0_5px_20px_rgba(255,255,255,0.5)]'>< Check size={30} color='green'/><h1 className='mr-12'>Apartados y Secciones</h1></div>
-                     <div className='flex flex-row justify-between items-center gap-2 bg-white p-5 rounded-lg shadow-[0_5px_20px_rgba(255,255,255,0.5)]'>< Check size={30} color='green'/><h1 className='mr-12'>Múltiples Páginas</h1></div>
-                     <div className='flex flex-row justify-between items-center gap-2 bg-white p-5 rounded-lg shadow-[0_5px_20px_rgba(255,255,255,0.5)]'>< Check size={30} color='green'/><h1 className='mr-12'>Medio de Pago</h1></div> 
-                     </div>
-                  </div>
+                 <div className="flex flex-col md:flex-row gap-8 max-w-5xl w-full justify-center">
+            <ul className="flex-1 space-y-6">
+              {[
+                'Formulario de Contacto',
+                'Responsive Design',
+                'Dominio Personalizado',
+                'Carrito de Compra',
+              ].map((item, idx) => (
+                <li
+                  key={idx}
+                  className="flex items-center gap-3 bg-white text-black rounded-lg p-5 shadow-[0_5px_20px_rgba(255,255,255,0.5)]"
+                >
+                  <Check size={30} color="green" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+            <ul className="flex-1 space-y-6">
+              {[
+                'Contacto a Redes Sociales',
+                'Apartados y Secciones',
+                'Múltiples Páginas',
+                'Medio de Pago',
+              ].map((item, idx) => (
+                <li
+                  key={idx}
+                  className="flex items-center gap-3 bg-white text-black rounded-lg p-5 shadow-[0_5px_20px_rgba(255,255,255,0.5)]"
+                >
+                  <Check size={30} color="green" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
                    <button className="relative group bg-[rgb(50,205,50)] h-[70px] text-white px-6 py-3 text-base font-bold rounded-md overflow-hidden transition-transform duration-300 ease-in-out hover:scale-105">
                      <span className="pointer-events-none absolute -left-full top-1/2 w-full h-full -translate-y-1/2 rotate-[-45deg] bg-white opacity-0 transition-all duration-500 ease-in-out group-hover:left-full group-hover:opacity-100"></span>
-                     <a href='https://wa.link/elp2e3' className="relative z-10">Pedí tu Servicio</a>
+                     <Link aria-label="Solicitar sitio web personalizado vía WhatsApp" href='https://wa.link/elp2e3' className="relative z-10">Solicitá tu E-commerce personal</Link>
                      </button>
                 </div>
-                </div>
-        <div className='flex flex-col w-screen h-[1450px] md:h-[700px] bg-white justify-center text-center gap-6 items-center'> 
-           <div className='text-4xl font-bold mt-6'><h1>Testimonios</h1></div>
+                </section>
+        <section  aria-label="Testimonios de clientes satisfechos" className='flex flex-col w-screen h-[1450px] md:h-[700px] bg-white justify-center text-center gap-6 items-center'> 
+           <div className='text-4xl font-bold mt-6'><h2>Testimonios</h2></div>
            <div className='flex flex-row m-12 gap-12 justify-center'>
  <div className='flex flex-col md:flex-row gap-26'>
   {/* Testimonio 1 */}
@@ -126,11 +182,29 @@ function Page() {
   </div>
         </div>
          </div>
-         <button className="relative group bg-[rgb(50,205,50)] text-white  w-[200px] px-6 py-3 text-base font-bold rounded-md overflow-hidden transition-transform duration-300 ease-in-out hover:scale-105">
+         <button className="relative group bg-[rgb(50,205,50)] text-white  w-[300px] px-6 py-3 text-base font-bold rounded-md overflow-hidden transition-transform duration-300 ease-in-out hover:scale-105">
          <span className="pointer-events-none absolute -left-full top-1/2 w-[100px] h-full -translate-y-1/2 rotate-[-45deg] bg-white opacity-0 transition-all duration-500 ease-in-out group-hover:left-full group-hover:opacity-100"></span>
-         <Link href='https://wa.link/elp2e3' className="relative z-10">Pedí tu Servicio</Link>
+         <Link href='https://wa.link/elp2e3' className="relative z-10">Solicitá tu E-commerce personal</Link>
          </button>
+    </section>
+         <section className='bg-[#f9f9f9] px-8 py-16 flex flex-col justify-center text-center items-center gap-6'>
+  <h2 className='text-3xl font-bold mb-6'>Preguntas Frecuentes</h2>
+  <div className='max-w-3xl mx-auto space-y-6 '>
+    <div>
+      <h3 className='font-semibold text-lg'>¿Cuánto tarda en hacerse un sitio web?</h3>
+      <p className='text-[#555]'>Dependiendo del tipo de sitio, puede tardar entre 1 a 3 semanas.</p>
     </div>
+    <div>
+      <h3 className='font-semibold text-lg'>¿Puedo pedir cambios una vez entregado?</h3>
+      <p className='text-[#555]'>Sí, ofrezco revisiones según el paquete acordado.</p>
+    </div>
+    <div>
+      <h3 className='font-semibold text-lg'>¿Incluye posicionamiento en Google?</h3>
+      <p className='text-[#555]'>Sí, implemento prácticas básicas de SEO para que Google pueda indexarte.</p>
+    </div>
+      </div>
+    </section>
+    </main>
       <Footer />
       </div>
 

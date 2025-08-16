@@ -106,7 +106,7 @@
     transform: scale(0.5); /* Amplía ligeramente el botón */
   }
   
-  .button a {
+  .button {
     color:white;
     text-decoration: none;
   }
