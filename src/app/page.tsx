@@ -4,7 +4,6 @@ import Menu from './componetes/inicio/menu'
 import Header from './componetes/inicio/header'
 import Footer from './componetes/inicio/footer'
 import JsonLd from './componetes/seo/JsonLd'
-import ChatWidget from './componetes/chat/ChatWidget'
 import Chatn8n from '../app/componetes/chat/Chatn8n'
 
 
