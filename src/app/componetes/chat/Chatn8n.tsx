@@ -36,6 +36,7 @@ const Chatn8n = ({ webhookUrl }: Chatn8nProps) => {
             footer: '',
             getStarted: 'New Conversation',
             inputPlaceholder: 'Type your question..',
+            closeButtonTooltip: 'Cerrar chat',
           },
         },
         enableStreaming: false,
