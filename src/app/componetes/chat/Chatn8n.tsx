@@ -35,7 +35,8 @@ const Chatn8n = ({ webhookUrl }: Chatn8nProps) => {
         },
         initialMessages: [
           '¡Hola! 👋',
-          'Mi nombre es Nathan. ¿En qué puedo ayudarte hoy?'
+          'Mi nombre es Nathan. ¿En qué puedo ayudarte hoy?',
+          '👉 [Hablar con un asesor comercial](https://wa.me/5491112345678?text=Hola%20Agustín%20Web.%20Estoy%20interesado%20en%20saber%20sobre...)'
         ],
       });
     });
