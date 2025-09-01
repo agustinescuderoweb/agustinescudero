@@ -37,7 +37,7 @@
     justify-content: center;
     text-align: center;
     padding: 9px;
-    color: white;
+    color: black;
 }
 
 .imag {
@@ -45,6 +45,8 @@
     border: 0.1px solid black;
     border-radius: 10px;
 }
+
+
 
 
 @media  screen and (max-width: 768px){

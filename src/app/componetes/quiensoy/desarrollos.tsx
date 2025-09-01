@@ -9,6 +9,7 @@ import turismo from '../../../../public/turismo.jpg'
 import ferrari from '../../../../public/ferrari.jpg'
 import meraki from '../../../../public/meraki.jpg'
 import huellas from '../../../../public/montaña.jpg'
+import analisis from '../../../../public/analisis.jpeg'
 
 
 function desarrollos() {
@@ -30,7 +31,9 @@ function desarrollos() {
         <div className={styles.contenedor}>
            <a href='https://merakiarteinsumo.com/'><div className={styles.card}><Image className={styles.imag} src={meraki} alt="meraki"></Image><h1>Ecommerce - Arte</h1></div></a>
            <a href='http://www.huellasandinasmountainshop.com.ar/'><div className={styles.card}><Image className={styles.imag} src={huellas} alt="meraki"></Image><h1>Tienda de Ropa de Montaña</h1></div></a>
-
+        </div>
+        <div className={styles.contenedor}>
+           <a href='https://zestly-0a3ce8.webflow.io/'><div className={styles.card}><Image className={styles.imag} src={analisis} alt="analisis"></Image><h1>App Inglesa de Analisis de Datos con IA</h1></div></a>
         </div>
     </div>
   )
