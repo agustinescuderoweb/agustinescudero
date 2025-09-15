@@ -4,7 +4,6 @@ import Menu from './componetes/inicio/menu'
 import Header from './componetes/inicio/header'
 import Footer from './componetes/inicio/footer'
 import JsonLd from './componetes/seo/JsonLd'
-import Chatn8n from '../app/componetes/chat/Chatn8n'
 
 
 function Page() {
@@ -24,7 +23,6 @@ function Page() {
       <JsonLd />
       <Menu />
       <Header />
-      <Chatn8n webhookUrl="https://n8n-oz3s.onrender.com/webhook/3579c138-48ac-4200-ac9e-dc74df06241f/chat" />
       <Footer />
     </>
   )
