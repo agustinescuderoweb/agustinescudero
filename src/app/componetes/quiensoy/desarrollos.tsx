@@ -26,9 +26,9 @@ function desarrollos() {
                 </button></div></a>
         </div>
         <div className={styles.contenedor}>
-           <a href='https://ferrari7.netlify.app/'><div className={styles.card}><Image className={styles.imag} src={ferrari} alt="ferrari"></Image><h1>Ferrari</h1><h3>Categoría: Automovilismo</h3>  <button className="relative group bg-[rgb(50,205,50)] text-white px-6 py-3 text-base font-bold rounded-md shadow-lg overflow-hidden transition-transform duration-300 ease-in-out hover:scale-105">
+              <a href='https://dentista-smoky.vercel.app'><div className={styles.card}><Image className={styles.imag} src={dentista} alt="dentista"></Image><h1>Dental Studio</h1><h3>Categoría: Dentistas</h3>  <button className="relative group bg-[rgb(50,205,50)] text-white px-6 py-3 text-base font-bold rounded-md shadow-lg overflow-hidden transition-transform duration-300 ease-in-out hover:scale-105">
                 <span className="pointer-events-none absolute -left-full top-1/2 w-full h-full -translate-y-1/2 rotate-[-45deg] bg-white opacity-0 transition-all duration-500 ease-in-out group-hover:left-full group-hover:opacity-100"></span>
-                <a href='https://ferrari7.netlify.app/' className="relative z-10">Ver Web</a>
+                <a href='https://dentista-smoky.vercel.app' className="relative z-10">Ver web</a>
                 </button></div></a>
           <a href='https://agustinmagia.netlify.app'><div className={styles.card}><Image className={styles.imag} src={magia} alt="magia"></Image><h1>Agustin Magia</h1><h3>Categoría: Arte</h3>  <button className="relative group bg-[rgb(50,205,50)] text-white px-6 py-3 text-base font-bold rounded-md shadow-lg overflow-hidden transition-transform duration-300 ease-in-out hover:scale-105">
                 <span className="pointer-events-none absolute -left-full top-1/2 w-full h-full -translate-y-1/2 rotate-[-45deg] bg-white opacity-0 transition-all duration-500 ease-in-out group-hover:left-full group-hover:opacity-100"></span>
@@ -51,9 +51,9 @@ function desarrollos() {
                 <span className="pointer-events-none absolute -left-full top-1/2 w-full h-full -translate-y-1/2 rotate-[-45deg] bg-white opacity-0 transition-all duration-500 ease-in-out group-hover:left-full group-hover:opacity-100"></span>
                 <a href='https://zestly-0a3ce8.webflow.io/' className="relative z-10">Ver web</a>
                 </button></div></a>
-           <a href='https://dentista-smoky.vercel.app'><div className={styles.card}><Image className={styles.imag} src={dentista} alt="dentista"></Image><h1>Dental Studio</h1><h3>Categoría: Dentistas</h3>  <button className="relative group bg-[rgb(50,205,50)] text-white px-6 py-3 text-base font-bold rounded-md shadow-lg overflow-hidden transition-transform duration-300 ease-in-out hover:scale-105">
+           <a href='https://ferrari7.netlify.app/'><div className={styles.card}><Image className={styles.imag} src={ferrari} alt="ferrari"></Image><h1>Ferrari</h1><h3>Categoría: Automovilismo</h3>  <button className="relative group bg-[rgb(50,205,50)] text-white px-6 py-3 text-base font-bold rounded-md shadow-lg overflow-hidden transition-transform duration-300 ease-in-out hover:scale-105">
                 <span className="pointer-events-none absolute -left-full top-1/2 w-full h-full -translate-y-1/2 rotate-[-45deg] bg-white opacity-0 transition-all duration-500 ease-in-out group-hover:left-full group-hover:opacity-100"></span>
-                <a href='https://dentista-smoky.vercel.app' className="relative z-10">Ver web</a>
+                <a href='https://ferrari7.netlify.app/' className="relative z-10">Ver Web</a>
                 </button></div></a>
         </div>
     </div>
