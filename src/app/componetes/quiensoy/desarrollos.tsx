@@ -9,6 +9,10 @@ import meraki from '../../../../public/meraki.jpg'
 import huellas from '../../../../public/montaña.jpg'
 import analisis from '../../../../public/analisis.jpeg'
 import dentista from '../../../../public/dentista.jpg'
+import mendotour from '../../../../public/mendotour.jpeg'
+import caribe from '../../../../public/caribe.jpg'
+import contador from '../../../../public/contador.jpg'
+import abogado from '../../../../public/abogado.jpg'
 
 
 function desarrollos() {
@@ -20,9 +24,27 @@ function desarrollos() {
                 <span className="pointer-events-none absolute -left-full top-1/2 w-full h-full -translate-y-1/2 rotate-[-45deg] bg-white opacity-0 transition-all duration-500 ease-in-out group-hover:left-full group-hover:opacity-100"></span>
                 <a href='http://www.huellasandinasmountainshop.com.ar/' className="relative z-10">Ver Web</a>
                 </button></div></a>
+              <a href='https://servidor-principal7-mendotour.zl81nh.easypanel.host/'><div className={styles.card}><Image className={styles.imag} src={mendotour} alt="mendotour"></Image><h1>MendoTour</h1><h3>Categoría: Turismo</h3>  <button className="relative group bg-[rgb(50,205,50)] text-white px-6 py-3 text-base font-bold rounded-md shadow-lg overflow-hidden transition-transform duration-300 ease-in-out hover:scale-105">
+                <span className="pointer-events-none absolute -left-full top-1/2 w-full h-full -translate-y-1/2 rotate-[-45deg] bg-white opacity-0 transition-all duration-500 ease-in-out group-hover:left-full group-hover:opacity-100"></span>
+                <a href='https://servidor-principal7-mendotour.zl81nh.easypanel.host/' className="relative z-10">Ver Web</a>
+                </button></div></a> </div>
+        <div className={styles.contenedor}>
+              <a href='https://servidor-principal7-turismo.zl81nh.easypanel.host/'><div className={styles.card}><Image className={styles.imag} src={caribe} alt="turismo"></Image><h1>Turismo Internacional</h1><h3>Categoría: Turismo</h3>  <button className="relative group bg-[rgb(50,205,50)] text-white px-6 py-3 text-base font-bold rounded-md shadow-lg overflow-hidden transition-transform duration-300 ease-in-out hover:scale-105">
+                <span className="pointer-events-none absolute -left-full top-1/2 w-full h-full -translate-y-1/2 rotate-[-45deg] bg-white opacity-0 transition-all duration-500 ease-in-out group-hover:left-full group-hover:opacity-100"></span>
+                <a href='https://servidor-principal7-turismo.zl81nh.easypanel.host/' className="relative z-10">Ver Web</a>
+                </button></div></a>
               <a href='https://turismoa.netlify.app/'><div className={styles.card}><Image className={styles.imag} src={turismo} alt="turismo"></Image><h1>Turismo Aventura</h1><h3>Categoría: Turismo</h3>  <button className="relative group bg-[rgb(50,205,50)] text-white px-6 py-3 text-base font-bold rounded-md shadow-lg overflow-hidden transition-transform duration-300 ease-in-out hover:scale-105">
                 <span className="pointer-events-none absolute -left-full top-1/2 w-full h-full -translate-y-1/2 rotate-[-45deg] bg-white opacity-0 transition-all duration-500 ease-in-out group-hover:left-full group-hover:opacity-100"></span>
                 <a href='https://turismoa.netlify.app/' className="relative z-10">Ver Web</a>
+                </button></div></a> </div>
+        <div className={styles.contenedor}>
+              <a href='https://estudioserio.com.ar/'><div className={styles.card}><Image className={styles.imag} src={abogado} alt="abogado"></Image><h1>Estudio Serio</h1><h3>Categoría: Abogacía</h3>  <button className="relative group bg-[rgb(50,205,50)] text-white px-6 py-3 text-base font-bold rounded-md shadow-lg overflow-hidden transition-transform duration-300 ease-in-out hover:scale-105">
+                <span className="pointer-events-none absolute -left-full top-1/2 w-full h-full -translate-y-1/2 rotate-[-45deg] bg-white opacity-0 transition-all duration-500 ease-in-out group-hover:left-full group-hover:opacity-100"></span>
+                <a href='https://estudioserio.com.ar/' className="relative z-10">Ver Web</a>
+                </button></div></a>
+              <a href='https://servidor-principal7-wordpress-sitio.zl81nh.easypanel.host/'><div className={styles.card}><Image className={styles.imag} src={contador} alt="turismo"></Image><h1>Accounting</h1><h3>Categoría: Contador</h3>  <button className="relative group bg-[rgb(50,205,50)] text-white px-6 py-3 text-base font-bold rounded-md shadow-lg overflow-hidden transition-transform duration-300 ease-in-out hover:scale-105">
+                <span className="pointer-events-none absolute -left-full top-1/2 w-full h-full -translate-y-1/2 rotate-[-45deg] bg-white opacity-0 transition-all duration-500 ease-in-out group-hover:left-full group-hover:opacity-100"></span>
+                <a href='https://servidor-principal7-wordpress-sitio.zl81nh.easypanel.host/' className="relative z-10">Ver Web</a>
                 </button></div></a>
         </div>
         <div className={styles.contenedor}>
