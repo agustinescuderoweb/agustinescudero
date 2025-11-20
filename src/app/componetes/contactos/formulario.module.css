@@ -84,6 +84,10 @@
 /* Botón */
 .button {
   background: #7b5cff;
+  display: flex;
+  justify-content: center;
+  width: 160px;
+  text-align: center;
   color: #fff;
   padding: 14px;
   font-size: 1.1rem;

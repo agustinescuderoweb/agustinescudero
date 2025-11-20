@@ -77,11 +77,9 @@ const Form  = () => {
         name="content"
         placeholder="Escribí tu mensaje..."
         required
-        rows="5"
         className={styles.textarea}
       ></textarea>
     </div>
-
     <button className={styles.button} type="submit">
       Enviar mensaje
     </button>
