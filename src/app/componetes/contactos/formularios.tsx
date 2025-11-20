@@ -31,20 +31,65 @@ const Form  = () => {
 
 
   return (
+    <div className={styles.espacio}>
     <div className={styles.contenedor}>
-      <div className={styles.correo}>
-        <h1>Enviáme un correo!</h1>
-        <h2>Carga tus datos y enviáme un correo por cualquier duda sobre planes o servicios</h2>
-      </div>
-      <form action="https://formspree.io/f/xanwnwrv"
-  method="POST" className={styles.form} onSubmit={handleSubmit}>
-        <input className={styles.name} name='name' type='text' placeholder='Escribe tu nombre'></input>
-        <input className={styles.email}  name='email' type='email' placeholder='Escribe tu email'></input>
-        <textarea className={styles.mensaje}  name='content' placeholder='Escribe tu mensaje acá'></textarea>
-        <button className={styles.button}>Enviar</button>
-        <p className={styles.alert}>{message}</p>
-      </form>
+  <div className={styles.correo}>
+    <h1 className="title">¡Enviáme un correo!</h1>
+    <h2 className="subtitle">
+      Cargá tus datos y enviáme un mensaje por cualquier duda sobre planes o servicios.
+    </h2>
+  </div>
+
+  <form
+    action="https://formspree.io/f/xanwnwrv"
+    method="POST"
+    className={styles.form}
+    onSubmit={handleSubmit}
+  >
+    <div className={styles.fieldGroup}>
+      <label htmlFor="name" className="sr-only">Nombre</label>
+      <input
+        id="name"
+        name="name"
+        type="text"
+        placeholder="Tu nombre"
+        required
+        className={styles.input}
+      />
     </div>
+
+    <div className={styles.fieldGroup}>
+      <label htmlFor="email" className="sr-only">Email</label>
+      <input
+        id="email"
+        name="email"
+        type="email"
+        placeholder="Tu email"
+        required
+        className={styles.input}
+      />
+    </div>
+
+    <div className={styles.fieldGroup}>
+      <label htmlFor="content" className="sr-only">Mensaje</label>
+      <textarea
+        id="content"
+        name="content"
+        placeholder="Escribí tu mensaje..."
+        required
+        rows="5"
+        className={styles.textarea}
+      ></textarea>
+    </div>
+
+    <button className={styles.button} type="submit">
+      Enviar mensaje
+    </button>
+
+    {message && <p className={styles.alert}>{message}</p>}
+  </form>
+</div>
+</div>
   )
 }
 
