@@ -25,7 +25,7 @@ function Page() {
       <Menu />
       <Header />
       <Footer />
-      <Chatn8n /> 
+      <Chatn8n webhookUrl="https://servidor-principal7-n8n.zl81nh.easypanel.host/webhook/2ab35d5c-523c-4b89-8348-4b282746" /> 
     </>
   )
 }
