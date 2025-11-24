@@ -4,6 +4,7 @@ import Menu from './componetes/inicio/menu'
 import Header from './componetes/inicio/header'
 import Footer from './componetes/inicio/footer'
 import JsonLd from './componetes/seo/JsonLd'
+import Chatn8n from './componetes/chat/Chatn8n'
 
 
 function Page() {
@@ -24,6 +25,7 @@ function Page() {
       <Menu />
       <Header />
       <Footer />
+      <Chatn8n /> 
     </>
   )
 }
