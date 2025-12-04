@@ -15,7 +15,7 @@ const Chatn8n = ({ webhookUrl }: Chatn8nProps) => {
       if (chatDiv) chatDiv.innerHTML = ''; // limpia chat anterior
 
       createChat({
-        webhookUrl: "https://servidor-principal7-n8n.zl81nh.easypanel.host/webhook/1367751e-31c2-4dfd-833b-e02c0b5f4610/chat",
+        webhookUrl: "https://n8n.agustinescuderoweb.com/webhook/c26c3e1a-a8e4-4ea8-87bc-b921e65464c9/chat",
         target: '#n8n-chat',
         mode: 'window', // chat flotante seguro para producción
         chatInputKey: 'chatInput',
