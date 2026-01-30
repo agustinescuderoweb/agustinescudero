@@ -5,15 +5,15 @@ import Header from './componetes/inicio/header'
 import Footer from './componetes/inicio/footer'
 import JsonLd from './componetes/seo/JsonLd'
 import Chatn8n from './componetes/chat/Chatn8n'
+import Testimonios from './componetes/testimonios/Testimonios'
 
 
 function Page() {
   return (
     <>
       <Head>
-        <title>Agustín Escudero | Desarrollo Web en Mendoza</title>
-        <meta name="description" content="Páginas web, tiendas online y landing pages para emprendedores en Mendoza. Soluciones digitales a medida." />
-        <meta name="keywords" content="desarrollador web, Mendoza, páginas web, ecommerce, diseño web, landing page" />
+        <title>Diseño Web para Emprendedores en Mendoza | Agustín Escudero</title>
+        <meta name="description" content="Diseño y desarrollo de páginas web, landing pages y tiendas online para emprendedores en Mendoza. Sitios rápidos, optimizados para Google y pensados para generar clientes." />
         <meta name="robots" content="index, follow" />
         <meta property="og:title" content="Agustín Escudero | Desarrollo Web en Mendoza" />
         <meta property="og:description" content="Creamos tu sitio web profesional o tienda online desde Mendoza para todo el país." />
@@ -24,6 +24,7 @@ function Page() {
       <JsonLd />
       <Menu />
       <Header />
+      <Testimonios />
       <Footer />
       <Chatn8n webhookUrl="https://n8n.agustinescuderoweb.com/webhook/c26c3e1a-a8e4-4ea8-87bc-b921e65464c9/chat" /> 
     </>

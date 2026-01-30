@@ -1,85 +1,137 @@
 import React from 'react'
 import Image from 'next/image'
 import styles from './desarrollos.module.css'
-import pc from '../../../../public/pc.jpg'
-import magia from '../../../../public/magia.jpg'
-import turismo from '../../../../public/turismo.jpg'
-import ferrari from '../../../../public/ferrari.jpg'
-import meraki from '../../../../public/meraki.jpg'
+
 import huellas from '../../../../public/montaña.jpg'
-import analisis from '../../../../public/analisis.jpeg'
-import dentista from '../../../../public/dentista.jpg'
 import mendotour from '../../../../public/mendotour.jpeg'
 import caribe from '../../../../public/caribe.jpg'
-import contador from '../../../../public/contador.jpg'
+import turismo from '../../../../public/turismo.jpg'
 import abogado from '../../../../public/abogado.jpg'
+import contador from '../../../../public/contador.jpg'
+import dentista from '../../../../public/dentista.jpg'
+import magia from '../../../../public/magia.jpg'
+import pc from '../../../../public/pc.jpg'
+import meraki from '../../../../public/meraki.jpg'
+import analisis from '../../../../public/analisis.jpeg'
+import ferrari from '../../../../public/ferrari.jpg'
 
+const proyectos = [
+  {
+    titulo: 'Huellas Andinas',
+    categoria: 'Turismo',
+    img: huellas,
+    url: 'http://www.huellasandinasmountainshop.com.ar/',
+  },
+  {
+    titulo: 'MendoTour',
+    categoria: 'Turismo',
+    img: mendotour,
+    url: 'https://mendotour.desarrollatuweb.online/',
+  },
+  {
+    titulo: 'Turismo Caribe',
+    categoria: 'Turismo',
+    img: caribe,
+    url: 'https://turismocaribe.desarrollatuweb.online/',
+  },
+  {
+    titulo: 'Turismo Aventura',
+    categoria: 'Turismo',
+    img: turismo,
+    url: 'https://turismoa.netlify.app/',
+  },
+  {
+    titulo: 'Estudio Serio',
+    categoria: 'Abogacía',
+    img: abogado,
+    url: 'https://estudioserio.com.ar/',
+  },
+  {
+    titulo: 'Accounting',
+    categoria: 'Contador',
+    img: contador,
+    url: 'https://contador.desarrollatuweb.online/',
+  },
+  {
+    titulo: 'Dental Studio',
+    categoria: 'Salud',
+    img: dentista,
+    url: 'https://dentista-smoky.vercel.app',
+  },
+  {
+    titulo: 'Agustin Magia',
+    categoria: 'Arte',
+    img: magia,
+    url: 'https://agustinmagia.netlify.app',
+  },
+  {
+    titulo: 'Modo PC',
+    categoria: 'Tecnología',
+    img: pc,
+    url: 'https://modopc.netlify.app',
+  },
+  {
+    titulo: 'Meraki Arte',
+    categoria: 'E-commerce',
+    img: meraki,
+    url: 'https://merakiarteinsumo.com/',
+  },
+  {
+    titulo: 'Análisis de Datos IA',
+    categoria: 'Inteligencia Artificial',
+    img: analisis,
+    url: 'https://zestly-0a3ce8.webflow.io/',
+  },
+  {
+    titulo: 'Ferrari',
+    categoria: 'Automovilismo',
+    img: ferrari,
+    url: 'https://ferrari7.netlify.app/',
+  },
+]
 
-function desarrollos() {
+function Desarrollos() {
   return (
-    <div className={styles.desarrollos}>
-        <h1 className={styles.misdesarrollos}>Mis Desarrollos</h1>
-        <div className={styles.contenedor}>
-             <a href='http://www.huellasandinasmountainshop.com.ar/'><div className={styles.card}><Image className={styles.imag} src={huellas} alt="meraki"></Image><h1>Tienda de Ropa de Montaña</h1><h3>Categoría: Turismo</h3>  <button className="relative group bg-[rgb(50,205,50)] text-white px-6 py-3 text-base font-bold rounded-md shadow-lg overflow-hidden transition-transform duration-300 ease-in-out hover:scale-105">
-                <span className="pointer-events-none absolute -left-full top-1/2 w-full h-full -translate-y-1/2 rotate-[-45deg] bg-white opacity-0 transition-all duration-500 ease-in-out group-hover:left-full group-hover:opacity-100"></span>
-                <a href='http://www.huellasandinasmountainshop.com.ar/' className="relative z-10">Ver Web</a>
-                </button></div></a>
-              <a href='https://mendotour.desarrollatuweb.online/'><div className={styles.card}><Image className={styles.imag} src={mendotour} alt="mendotour"></Image><h1>MendoTour</h1><h3>Categoría: Turismo</h3>  <button className="relative group bg-[rgb(50,205,50)] text-white px-6 py-3 text-base font-bold rounded-md shadow-lg overflow-hidden transition-transform duration-300 ease-in-out hover:scale-105">
-                <span className="pointer-events-none absolute -left-full top-1/2 w-full h-full -translate-y-1/2 rotate-[-45deg] bg-white opacity-0 transition-all duration-500 ease-in-out group-hover:left-full group-hover:opacity-100"></span>
-                <a href='https://mendotour.desarrollatuweb.online/' className="relative z-10">Ver Web</a>
-                </button></div></a> </div>
-        <div className={styles.contenedor}>
-              <a href='https://turismocaribe.desarrollatuweb.online/'><div className={styles.card}><Image className={styles.imag} src={caribe} alt="turismo"></Image><h1>Turismo Internacional</h1><h3>Categoría: Turismo</h3>  <button className="relative group bg-[rgb(50,205,50)] text-white px-6 py-3 text-base font-bold rounded-md shadow-lg overflow-hidden transition-transform duration-300 ease-in-out hover:scale-105">
-                <span className="pointer-events-none absolute -left-full top-1/2 w-full h-full -translate-y-1/2 rotate-[-45deg] bg-white opacity-0 transition-all duration-500 ease-in-out group-hover:left-full group-hover:opacity-100"></span>
-                <a href='https://turismocaribe.desarrollatuweb.online/' className="relative z-10">Ver Web</a>
-                </button></div></a>
-              <a href='https://turismoa.netlify.app/'><div className={styles.card}><Image className={styles.imag} src={turismo} alt="turismo"></Image><h1>Turismo Aventura</h1><h3>Categoría: Turismo</h3>  <button className="relative group bg-[rgb(50,205,50)] text-white px-6 py-3 text-base font-bold rounded-md shadow-lg overflow-hidden transition-transform duration-300 ease-in-out hover:scale-105">
-                <span className="pointer-events-none absolute -left-full top-1/2 w-full h-full -translate-y-1/2 rotate-[-45deg] bg-white opacity-0 transition-all duration-500 ease-in-out group-hover:left-full group-hover:opacity-100"></span>
-                <a href='https://turismoa.netlify.app/' className="relative z-10">Ver Web</a>
-                </button></div></a> </div>
-        <div className={styles.contenedor}>
-              <a href='https://estudioserio.com.ar/'><div className={styles.card}><Image className={styles.imag} src={abogado} alt="abogado"></Image><h1>Estudio Serio</h1><h3>Categoría: Abogacía</h3>  <button className="relative group bg-[rgb(50,205,50)] text-white px-6 py-3 text-base font-bold rounded-md shadow-lg overflow-hidden transition-transform duration-300 ease-in-out hover:scale-105">
-                <span className="pointer-events-none absolute -left-full top-1/2 w-full h-full -translate-y-1/2 rotate-[-45deg] bg-white opacity-0 transition-all duration-500 ease-in-out group-hover:left-full group-hover:opacity-100"></span>
-                <a href='https://estudioserio.com.ar/' className="relative z-10">Ver Web</a>
-                </button></div></a>
-              <a href='https://contador.desarrollatuweb.online/'><div className={styles.card}><Image className={styles.imag} src={contador} alt="turismo"></Image><h1>Accounting</h1><h3>Categoría: Contador</h3>  <button className="relative group bg-[rgb(50,205,50)] text-white px-6 py-3 text-base font-bold rounded-md shadow-lg overflow-hidden transition-transform duration-300 ease-in-out hover:scale-105">
-                <span className="pointer-events-none absolute -left-full top-1/2 w-full h-full -translate-y-1/2 rotate-[-45deg] bg-white opacity-0 transition-all duration-500 ease-in-out group-hover:left-full group-hover:opacity-100"></span>
-                <a href='https://contador.desarrollatuweb.online/' className="relative z-10">Ver Web</a>
-                </button></div></a>
-        </div>
-        <div className={styles.contenedor}>
-              <a href='https://dentista-smoky.vercel.app'><div className={styles.card}><Image className={styles.imag} src={dentista} alt="dentista"></Image><h1>Dental Studio</h1><h3>Categoría: Dentistas</h3>  <button className="relative group bg-[rgb(50,205,50)] text-white px-6 py-3 text-base font-bold rounded-md shadow-lg overflow-hidden transition-transform duration-300 ease-in-out hover:scale-105">
-                <span className="pointer-events-none absolute -left-full top-1/2 w-full h-full -translate-y-1/2 rotate-[-45deg] bg-white opacity-0 transition-all duration-500 ease-in-out group-hover:left-full group-hover:opacity-100"></span>
-                <a href='https://dentista-smoky.vercel.app' className="relative z-10">Ver web</a>
-                </button></div></a>
-          <a href='https://agustinmagia.netlify.app'><div className={styles.card}><Image className={styles.imag} src={magia} alt="magia"></Image><h1>Agustin Magia</h1><h3>Categoría: Arte</h3>  <button className="relative group bg-[rgb(50,205,50)] text-white px-6 py-3 text-base font-bold rounded-md shadow-lg overflow-hidden transition-transform duration-300 ease-in-out hover:scale-105">
-                <span className="pointer-events-none absolute -left-full top-1/2 w-full h-full -translate-y-1/2 rotate-[-45deg] bg-white opacity-0 transition-all duration-500 ease-in-out group-hover:left-full group-hover:opacity-100"></span>
-                <a href='https://agustinmagia.netlify.app' className="relative z-10">Ver Web</a>
-                </button></div></a>
-        </div>
-        <div className={styles.contenedor}>
-            <a href='https://modopc.netlify.app'><div className={styles.card}><Image className={styles.imag} src={pc} alt="pc"></Image><h1>Modo Pc</h1><h3>Categoría: Tecnología</h3>  <button className="relative group bg-[rgb(50,205,50)] text-white px-6 py-3 text-base font-bold rounded-md shadow-lg overflow-hidden transition-transform duration-300 ease-in-out hover:scale-105">
-                <span className="pointer-events-none absolute -left-full top-1/2 w-full h-full -translate-y-1/2 rotate-[-45deg] bg-white opacity-0 transition-all duration-500 ease-in-out group-hover:left-full group-hover:opacity-100"></span>
-                <a href='https://modopc.netlify.app' className="relative z-10">Ver Web</a>
-                </button></div></a>
-           <a href='https://merakiarteinsumo.com/'><div className={styles.card}><Image className={styles.imag} src={meraki} alt="meraki"></Image><h1>Ecommerce - Arte</h1><h3>Categoría: Arte</h3>  <button className="relative group bg-[rgb(50,205,50)] text-white px-6 py-3 text-base font-bold rounded-md shadow-lg overflow-hidden transition-transform duration-300 ease-in-out hover:scale-105">
-                <span className="pointer-events-none absolute -left-full top-1/2 w-full h-full -translate-y-1/2 rotate-[-45deg] bg-white opacity-0 transition-all duration-500 ease-in-out group-hover:left-full group-hover:opacity-100"></span>
-                <a href='https://merakiarteinsumo.com/' className="relative z-10">Ver Web</a>
-                </button></div></a>
-          
-        </div>
-        <div className={styles.contenedor}>
-           <a href='https://zestly-0a3ce8.webflow.io/'><div className={styles.card}><Image className={styles.imag} src={analisis} alt="analisis"></Image><h1>Analisis de Datos con IA</h1><h3>Categoría: Inteligencia Artificial</h3>  <button className="relative group bg-[rgb(50,205,50)] text-white px-6 py-3 text-base font-bold rounded-md shadow-lg overflow-hidden transition-transform duration-300 ease-in-out hover:scale-105">
-                <span className="pointer-events-none absolute -left-full top-1/2 w-full h-full -translate-y-1/2 rotate-[-45deg] bg-white opacity-0 transition-all duration-500 ease-in-out group-hover:left-full group-hover:opacity-100"></span>
-                <a href='https://zestly-0a3ce8.webflow.io/' className="relative z-10">Ver web</a>
-                </button></div></a>
-           <a href='https://ferrari7.netlify.app/'><div className={styles.card}><Image className={styles.imag} src={ferrari} alt="ferrari"></Image><h1>Ferrari</h1><h3>Categoría: Automovilismo</h3>  <button className="relative group bg-[rgb(50,205,50)] text-white px-6 py-3 text-base font-bold rounded-md shadow-lg overflow-hidden transition-transform duration-300 ease-in-out hover:scale-105">
-                <span className="pointer-events-none absolute -left-full top-1/2 w-full h-full -translate-y-1/2 rotate-[-45deg] bg-white opacity-0 transition-all duration-500 ease-in-out group-hover:left-full group-hover:opacity-100"></span>
-                <a href='https://ferrari7.netlify.app/' className="relative z-10">Ver Web</a>
-                </button></div></a>
-        </div>
-    </div>
+    <section className={styles.desarrollos}>
+      <div className={styles.header}>
+        <h2 className={styles.titulo}>Proyectos realizados</h2>
+        <p className={styles.descripcion}>
+          Algunos de los sitios y productos digitales que desarrollé para
+          clientes reales en distintos rubros.
+        </p>
+      </div>
+
+      <div className={styles.grid}>
+        {proyectos.map((proyecto, index) => (
+          <a
+            key={index}
+            href={proyecto.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.card}
+          >
+            <div className={styles.imageWrapper}>
+              <Image
+                src={proyecto.img}
+                alt={proyecto.titulo}
+                className={styles.image}
+              />
+              <div className={styles.overlay}></div>
+            </div>
+
+            <div className={styles.cardContent}>
+              <span className={styles.categoria}>{proyecto.categoria}</span>
+              <h3 className={styles.cardTitle}>{proyecto.titulo}</h3>
+
+              <button className={styles.button}>
+                Ver proyecto
+              </button>
+            </div>
+          </a>
+        ))}
+      </div>
+    </section>
   )
 }
 
-export default desarrollos
+export default Desarrollos

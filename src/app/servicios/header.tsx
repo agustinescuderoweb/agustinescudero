@@ -1,75 +1,74 @@
 import React from 'react'
 import Image from 'next/image'
+import Link from 'next/link'
+
 import landing from '../../../public/landing.jpg'
 import sitio from '../../../public/sitio.jpg'
-import ecommers from '../../../public/ecommer.jpg'
+import ecommerce from '../../../public/ecommer.jpg'
 
-function header() {
+const servicios = [
+  {
+    href: '/servicios/landing',
+    image: landing,
+    title: 'Landing Page',
+    description: 'Optimiza tus conversiones con una landing enfocada en resultados.',
+    alt: 'Diseño de landing page profesional'
+  },
+  {
+    href: '/servicios/sitios',
+    image: sitio,
+    title: 'Sitio Web',
+    description: 'Transmití profesionalismo con un sitio web moderno, rápido y adaptable.',
+    alt: 'Desarrollo de sitios web modernos'
+  },
+  {
+    href: '/servicios/ecommerce',
+    image: ecommerce,
+    title: 'E-commerce',
+    description: 'Convertí visitantes en clientes con una tienda online rápida y segura.',
+    alt: 'Tienda online y ecommerce personalizada'
+  }
+]
+
+export default function HeaderServicios() {
   return (
- <div className="flex flex-col md:flex-row w-full h-screen">
-  {/* Primer bloque */}
-  <a
-    href="servicios/landing"
-    title="Ver servicio de Landing Page"
-    aria-label="Ver servicio de Landing Page"
-    className="relative flex-1 shadow-lg cursor-pointer group overflow-hidden"
-  >
-    <Image
-      src={landing}
-      fill
-      alt="Diseño de landing page profesional" 
-      className="object-cover transition-transform duration-1000 group-hover:scale-105"
-    />
-    <div className="absolute inset-0 bg-black/60 z-10 transition-opacity duration-300 group-hover:bg-black/75"></div>
-    <div className="absolute inset-0 flex flex-col items-center justify-center z-20 text-white px-4 text-center">
-      <h2 className="text-2xl md:text-4xl font-semibold mb-2">Landing Page</h2>
-      <p className="text-sm md:text-base text-white">Optimiza tus conversiones con una landing enfocada en resultados.</p>
-    </div>
-  </a>
+    <header className="w-full h-screen grid grid-cols-1 md:grid-cols-3">
+      {servicios.map((servicio, index) => (
+        <Link
+          key={index}
+          href={servicio.href}
+          aria-label={`Ver servicio de ${servicio.title}`}
+          className="relative group overflow-hidden"
+        >
+          {/* Imagen */}
+          <Image
+            src={servicio.image}
+            alt={servicio.alt}
+            fill
+            priority={index === 0}
+            className="object-cover transition-transform duration-[1200ms] group-hover:scale-110"
+          />
 
-  {/* Segundo bloque */}
-  <a
-    href="servicios/sitios"
-    className="relative flex-1 shadow-lg cursor-pointer group overflow-hidden"
-  >
-    <Image
-      src={sitio}
-      alt="Desarrollo de sitios web modernos"
-      fill
-      className="object-cover transition-transform duration-1000 group-hover:scale-105"
-    />
-    <div className="absolute inset-0 bg-black/60 z-10 transition-opacity duration-300 group-hover:bg-black/75"></div>
-    <div className="absolute inset-0 flex flex-col items-center justify-center z-20 text-white px-4 text-center">
-      <h2 className="text-2xl md:text-4xl font-semibold mb-2">Sitio Web</h2>
-      <p className="text-sm md:text-base text-white">
-         Transmití profesionalismo con un sitio web moderno, rápido y adaptable a cualquier dispositivo.
-      </p>
-    </div>
-  </a>
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/50 to-black/30 transition-all duration-300 group-hover:from-black/90" />
 
-  {/* Tercer bloque */}
-  <a
-    href="servicios/ecommerce"
-    className="relative flex-1 shadow-lg cursor-pointer group overflow-hidden"
-  >
-    <Image
-      src={ecommers}
-      alt="Tienda online y ecommerce personalizada"
-      fill
-      className="object-cover transition-transform duration-1000 group-hover:scale-105"
-    />
-    <div className="absolute inset-0 bg-black/60 z-10 transition-opacity duration-300 group-hover:bg-black/75"></div>
-    <div className="absolute inset-0 flex flex-col items-center justify-center z-20 text-white px-4 text-center">
-      <h2 className="text-2xl md:text-4xl font-semibold mb-2">E-commerce</h2>
-      <p className="text-sm md:text-base text-white">
-          Convertí visitantes en clientes con una tienda online rápida, segura y fácil de usar.
-      </p>
-    </div>
-  </a>
-</div>
+          {/* Contenido */}
+          <div className="absolute inset-0 z-10 flex flex-col items-center justify-center text-center px-6 text-white">
+            <h2 className="text-3xl md:text-4xl font-bold mb-3 tracking-tight">
+              {servicio.title}
+            </h2>
 
+            <p className="text-sm md:text-base text-gray-200 max-w-sm">
+              {servicio.description}
+            </p>
 
+            {/* CTA */}
+            <span className="mt-6 inline-block border border-white/70 px-6 py-2 text-sm uppercase tracking-wider transition-all duration-300 group-hover:bg-white group-hover:text-black">
+              Ver más
+            </span>
+          </div>
+        </Link>
+      ))}
+    </header>
   )
 }
-
-export default header

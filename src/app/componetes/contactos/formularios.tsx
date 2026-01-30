@@ -1,95 +1,94 @@
 'use client'
-import React from 'react'
+import React, { useState } from 'react'
 import styles from './formulario.module.css'
-import { useState } from 'react'
 
 interface ErrorResponse {
-  errors: { message: string }[];
+  errors: { message: string }[]
 }
 
-const Form  = () => {
+const Form = () => {
   const [message, setMessage] = useState('')
+  const [loading, setLoading] = useState(false)
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
-    const form = e.currentTarget;
-    const data = new FormData(form);
-    const response = await fetch(form.action,{
+    setLoading(true)
+    setMessage('')
+
+    const form = e.currentTarget
+    const data = new FormData(form)
+
+    const response = await fetch(form.action, {
       method: 'POST',
       body: data,
       headers: {
-        Accept: 'Aplication/json'
+        Accept: 'application/json'
       }
     })
-    const result: ErrorResponse = await response.json();
+
+    const result: ErrorResponse = await response.json()
+
     if (!response.ok) {
-      setMessage(result.errors.map((error) => error.message).join(', '));
-      return false;
-  }
-  setMessage('Se ha enviado el correo satisfactoriamente')
-  }
+      setMessage(result.errors.map(error => error.message).join(', '))
+      setLoading(false)
+      return
+    }
 
-
+    setMessage('✅ Mensaje enviado correctamente. Te respondo a la brevedad.')
+    setLoading(false)
+    form.reset()
+  }
 
   return (
-    <div className={styles.espacio}>
-    <div className={styles.contenedor}>
-  <div className={styles.correo}>
-    <h1 className="title">¡Enviáme un correo!</h1>
-    <h2 className="subtitle">
-      Cargá tus datos y enviáme un mensaje por cualquier duda sobre planes o servicios.
-    </h2>
-  </div>
+    <section className={styles.section}>
+      <div className={styles.card}>
+        <header className={styles.header}>
+          <h2>Contactame</h2>
+          <p>
+            Contame sobre tu proyecto o tu idea y vemos cómo puedo ayudarte a
+            llevarla al siguiente nivel 🚀
+          </p>
+        </header>
 
-  <form
-    action="https://formspree.io/f/xanwnwrv"
-    method="POST"
-    className={styles.form}
-    onSubmit={handleSubmit}
-  >
-    <div className={styles.fieldGroup}>
-      <label htmlFor="name" className="sr-only">Nombre</label>
-      <input
-        id="name"
-        name="name"
-        type="text"
-        placeholder="Tu nombre"
-        required
-        className={styles.input}
-      />
-    </div>
+        <form
+          action="https://formspree.io/f/xanwnwrv"
+          method="POST"
+          onSubmit={handleSubmit}
+          className={styles.form}
+        >
+          <input
+            type="text"
+            name="name"
+            placeholder="Nombre"
+            required
+            className={styles.input}
+          />
 
-    <div className={styles.fieldGroup}>
-      <label htmlFor="email" className="sr-only">Email</label>
-      <input
-        id="email"
-        name="email"
-        type="email"
-        placeholder="Tu email"
-        required
-        className={styles.input}
-      />
-    </div>
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            required
+            className={styles.input}
+          />
 
-    <div className={styles.fieldGroup}>
-      <label htmlFor="content" className="sr-only">Mensaje</label>
-      <textarea
-        id="content"
-        name="content"
-        placeholder="Escribí tu mensaje..."
-        required
-        className={styles.textarea}
-      ></textarea>
-    </div>
-    <button className={styles.button} type="submit">
-      Enviar mensaje
-    </button>
+          <textarea
+            name="content"
+            placeholder="Contame un poco sobre tu proyecto..."
+            required
+            className={styles.textarea}
+          />
 
-    {message && <p className={styles.alert}>{message}</p>}
-  </form>
-</div>
-</div>
+          <button type="submit" className={styles.button} disabled={loading}>
+            {loading ? 'Enviando...' : 'Enviar mensaje'}
+          </button>
+
+          {message && <p className={styles.alert}>{message}</p>}
+        </form>
+      </div>
+    </section>
   )
 }
 
-
 export default Form
+

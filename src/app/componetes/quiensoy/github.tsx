@@ -1,17 +1,51 @@
 import React from 'react'
+import Image from 'next/image'
+import styles from './github.module.css'
 import desarrollos from '../../../../public/desarrolloweb.jpg'
 import git from '../../../../public/gitimage.jpg'
-import styles from './github.module.css'
-import Image from 'next/image'
 
-function github() {
+function Github() {
   return (
-    <div className={styles.contenedor}>
-        <div className={styles.contenido}><h1>Mis Proyectos Recientes<br></br>...</h1><h2>Estos son algunos proyectos que he creado recientemente..</h2><h3>Si sos desarrollador podes visitar mis códigos..</h3></div>
-        <div className={styles.imagenes}><Image className={styles.desarrollos} src={desarrollos} alt="desarrollos"></Image><Image className={styles.git} src={git} alt="git"></Image></div>
-        <button className={styles.button}><a href="https://github.com/agustinescuderoweb">Ver más Proyectos</a></button>
-    </div>
+    <section className={styles.contenedor}>
+      
+      <div className={styles.contenido}>
+        <h2 className={styles.subtitulo}>Proyectos & Código</h2>
+
+        <h1 className={styles.titulo}>
+          Mis Proyectos Recientes
+        </h1>
+
+        <p className={styles.descripcion}>
+          Estos son algunos de los proyectos que desarrollé recientemente,
+          enfocados en diseño web, performance y experiencia de usuario.
+        </p>
+
+        <p className={styles.descripcionSec}>
+          Si sos desarrollador, podés explorar mis repositorios y ver cómo
+          están construidos los proyectos.
+        </p>
+
+        <a
+          href="https://github.com/agustinescuderoweb"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.button}
+        >
+          Ver GitHub
+        </a>
+      </div>
+
+      <div className={styles.imagenes}>
+        <Image
+          src={desarrollos}
+          alt="Desarrollo de proyectos web modernos"
+          className={styles.imagen}
+          priority
+        />
+      </div>
+
+    </section>
   )
 }
 
-export default github
+export default Github

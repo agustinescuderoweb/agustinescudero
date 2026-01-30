@@ -7,7 +7,7 @@ import Footer from '../componetes/inicio/footer'
 export const metadata = {
   title: 'Landing Page Profesional | Agustín Escudero',
   description:
-    'Diseño de landing pages efectivas para vender, captar leads y aumentar conversiones. Servicio rápido, personalizado y optimizado para campañas publicitarias.',
+    'Webs que generan clientes + SEO para emprendedores y marcas personales',
 };
 
 
