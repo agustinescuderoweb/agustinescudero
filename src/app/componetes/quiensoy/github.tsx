@@ -2,7 +2,7 @@ import React from 'react'
 import Image from 'next/image'
 import styles from './github.module.css'
 import desarrollos from '../../../../public/desarrolloweb.jpg'
-import git from '../../../../public/gitimage.jpg'
+
 
 function Github() {
   return (

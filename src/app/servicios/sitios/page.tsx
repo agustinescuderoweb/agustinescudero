@@ -1,7 +1,6 @@
 'use client'
 
 import React, { useEffect } from 'react'
-import Link from 'next/link'
 import Image from 'next/image'
 import Head from 'next/head'
 import AOS from 'aos'
@@ -56,13 +55,13 @@ export default function Page() {
               rápidos y pensados para transmitir confianza y convertir visitas en clientes.
             </p>
 
-            <Link
+            <a
               href="https://wa.link/elp2e3"
               className="relative group bg-[rgb(50,205,50)] text-white px-8 py-4 font-bold rounded-md overflow-hidden transition-transform hover:scale-105"
             >
               <span className="absolute inset-0 bg-white opacity-0 group-hover:opacity-20 transition-opacity"></span>
               Solicitar mi sitio web
-            </Link>
+            </a>
           </div>
 
           <div className="relative md:w-1/2 h-[400px] md:h-auto">
@@ -126,12 +125,12 @@ export default function Page() {
           </div>
 
           <div className="flex justify-center mt-16">
-            <Link
+            <a
               href="https://wa.link/elp2e3"
               className="relative group bg-[rgb(50,205,50)] px-10 py-4 font-bold rounded-md transition-transform hover:scale-105"
             >
               Solicitar presupuesto
-            </Link>
+            </a>
           </div>
         </section>
 
