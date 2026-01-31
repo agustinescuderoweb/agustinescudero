@@ -3,7 +3,6 @@
 import React, { useEffect } from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
-import Link from 'next/link'
 import Menu from '@/app/componetes/inicio/menu'
 import Footer from '@/app/componetes/inicio/footer'
 import landing from '../../../../public/landing.jpg'
