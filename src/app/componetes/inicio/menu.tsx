@@ -6,6 +6,7 @@ import styles from '../../componetes/inicio/menu.module.css'
 import React, { useState } from 'react'
 import { FaBars, FaTimes } from 'react-icons/fa'
 
+
 function Menu() {
   const [isOpen, setIsOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
