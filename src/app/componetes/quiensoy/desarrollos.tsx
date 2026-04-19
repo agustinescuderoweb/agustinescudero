@@ -7,7 +7,6 @@ import mendotour from '../../../../public/mendotour.jpeg'
 import caribe from '../../../../public/caribe.jpg'
 import turismo from '../../../../public/turismo.jpg'
 import abogado from '../../../../public/abogado.jpg'
-import contador from '../../../../public/contador.jpg'
 import dentista from '../../../../public/dentista.jpg'
 import magia from '../../../../public/magia.jpg'
 import pc from '../../../../public/pc.jpg'
@@ -26,13 +25,13 @@ const proyectos = [
     titulo: 'MendoTour',
     categoria: 'Turismo',
     img: mendotour,
-    url: 'https://mendotour.desarrollatuweb.online/',
+    url: 'https://mendotour.agustinescuderoweb.com/',
   },
   {
     titulo: 'Turismo Caribe',
     categoria: 'Turismo',
     img: caribe,
-    url: 'https://turismocaribe.desarrollatuweb.online/',
+    url: 'https://turismocaribe.agustinescuderoweb.com/',
   },
   {
     titulo: 'Turismo Aventura',
@@ -45,12 +44,6 @@ const proyectos = [
     categoria: 'Abogacía',
     img: abogado,
     url: 'https://estudioserio.com.ar/',
-  },
-  {
-    titulo: 'Accounting',
-    categoria: 'Contador',
-    img: contador,
-    url: 'https://contador.desarrollatuweb.online/',
   },
   {
     titulo: 'Dental Studio',
