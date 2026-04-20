@@ -3,7 +3,6 @@ import Head from 'next/head'
 import Menu from './componetes/inicio/menu'
 import Header from './componetes/inicio/header'
 import Footer from './componetes/inicio/footer'
-import JsonLd from './componetes/seo/JsonLd'
 import Chatn8n from './componetes/chat/Chatn8n'
 import Testimonios from './componetes/testimonios/Testimonios'
 
@@ -21,7 +20,6 @@ function Page() {
         <meta property="og:url" content="https://www.agustinescuderoweb.com" />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
-      <JsonLd />
       <Menu />
       <Header />
       <Testimonios />

@@ -44,8 +44,8 @@ export default function Page() {
 
       <main>
         {/* HERO */}
-        <section className="relative flex flex-col md:flex-row min-h-screen bg-black text-white">
-          <div className="flex flex-col md:w-1/2 justify-center items-center text-center px-8 gap-6 z-10">
+        <section className="relative flex flex-col md:flex-row bg-black text-white lg:min-h-screen">
+          <div className="flex flex-col md:w-1/2 justify-center items-center text-center px-8 gap-6 z-10 my-10">
             <h1 className="text-4xl md:text-5xl font-bold leading-tight">
               Diseño de Sitios Web Profesionales
             </h1>
