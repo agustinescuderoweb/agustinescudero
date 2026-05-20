@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://agustinescuderoweb.com
+
+# Sitemaps
+Sitemap: https://agustinescuderoweb.com/sitemap.xml

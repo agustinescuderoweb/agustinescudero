@@ -1,0 +1,40 @@
+.contenedor {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  padding: 6rem 2rem;
+  background: #0f0f0f;
+  color: #fff;
+}
+
+.titulo {
+  font-size: 2.8rem;
+  font-weight: 700;
+}
+
+.subtitulo {
+  color: #32cd32;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.descripcion,
+.descripcionSec {
+  color: #cfcfcf;
+  line-height: 1.6;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 2rem;
+  background: rgb(50,205,50);
+  color: #fff;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: transform .3s ease;
+}
+
+.button:hover {
+  transform: scale(1.05);
+}

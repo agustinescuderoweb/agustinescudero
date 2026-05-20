@@ -1,0 +1,95 @@
+.section {
+  width: 100%;
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(180deg, #000000 0%, #0a0a0a 100%);
+  padding: 80px 20px;
+}
+
+.card {
+  width: 100%;
+  max-width: 500px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 20px;
+  padding: 40px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+}
+
+.header h2 {
+  color: #ffffff;
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.header p {
+  color: #9ca3af;
+  font-size: 15px;
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.input,
+.textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 10px;
+  border: 1px solid #1f2933;
+  background-color: #0f172a;
+  color: #ffffff;
+  font-size: 15px;
+  outline: none;
+  transition: border 0.3s ease;
+}
+
+.input::placeholder,
+.textarea::placeholder {
+  color: #6b7280;
+}
+
+.input:focus,
+.textarea:focus {
+  border-color: rgb(50, 205, 50);
+}
+
+.textarea {
+  min-height: 120px;
+  resize: none;
+}
+
+.button {
+  margin-top: 10px;
+  background: rgb(50, 205, 50);
+  color: #ffffff;
+  font-weight: bold;
+  padding: 14px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+.button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.alert {
+  margin-top: 15px;
+  color: #22c55e;
+  font-size: 14px;
+  text-align: center;
+}
