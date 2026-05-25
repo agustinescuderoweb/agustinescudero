@@ -7,7 +7,19 @@ const postsDirectory = path.join(
   "src/content/blog"
 );
 
-export function getPosts() {
+export type Post = {
+  title: string;
+  slug: string;
+  category: string;
+  excerpt: string;
+  publishedAt: string;
+  image?: string;
+  featured?: boolean;
+  readingTime?: string;
+  content?: string;
+};
+
+export function getPosts(): Post[] {
   const files = fs.readdirSync(postsDirectory);
 
   const posts = files.map((fileName) => {
@@ -27,14 +39,14 @@ export function getPosts() {
 
     return {
       slug,
-      ...data,
+      ...(data as Omit<Post, "slug">),
     };
   });
 
   return posts;
 }
 
-export function getPostBySlug(slug: string) {
+export function getPostBySlug(slug: string): Post {
   const fullPath = path.join(
     postsDirectory,
     `${slug}.mdx`
@@ -50,6 +62,6 @@ export function getPostBySlug(slug: string) {
   return {
     slug,
     content,
-    ...data,
+    ...(data as Omit<Post, "slug" | "content">),
   };
 }

@@ -9,7 +9,12 @@ export default function CategoryPage({
   const posts = getPosts();
 
   const filteredPosts = posts.filter(
-    (post: any) => post.category === params.category
+    (post: {
+      title: string;
+      slug: string;
+      excerpt: string;
+      category: string;
+    }) => post.category === params.category
   );
 
   return (
@@ -19,7 +24,12 @@ export default function CategoryPage({
       </h1>
 
       <div className="space-y-8">
-        {filteredPosts.map((post: any) => (
+        {filteredPosts.map((post: {
+          title: string;
+          slug: string;
+          excerpt: string;
+          category: string;
+        }) => (
           <article
             key={post.slug}
             className="border-b border-white/10 pb-6"
