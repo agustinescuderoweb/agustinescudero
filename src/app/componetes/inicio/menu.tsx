@@ -48,6 +48,7 @@ const toggleMenu = () => {
         </div>
        {/* <Link href="/publicidad" className="text-black !no-underline" title="Publicidad">Publicidad Online</Link> */}
         <Link href="/portafolio" className="text-black !no-underline" title="Conocer quién soy">Portafolio</Link>
+        <Link href="/blog" className="text-black !no-underline" title="Blog">Blog</Link>
         <Link href="/contactos" className="text-black !no-underline" title="Formulario de contacto">Contactos</Link>
       </div>
     </nav>

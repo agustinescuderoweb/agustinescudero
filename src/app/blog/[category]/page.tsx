@@ -1,0 +1,43 @@
+import Link from "next/link";
+import { getPosts } from "@/lib/posts";
+
+export default function CategoryPage({
+  params,
+}: {
+  params: { category: string };
+}) {
+  const posts = getPosts();
+
+  const filteredPosts = posts.filter(
+    (post: any) => post.category === params.category
+  );
+
+  return (
+    <main className="max-w-4xl mx-auto py-10 px-4">
+      <h1 className="text-5xl font-bold capitalize mb-10">
+        {params.category}
+      </h1>
+
+      <div className="space-y-8">
+        {filteredPosts.map((post: any) => (
+          <article
+            key={post.slug}
+            className="border-b border-white/10 pb-6"
+          >
+            <Link
+              href={`/blog/${post.category}/${post.slug}`}
+            >
+              <h2 className="text-3xl font-semibold hover:underline">
+                {post.title}
+              </h2>
+            </Link>
+
+            <p className="text-gray-400 mt-3">
+              {post.excerpt}
+            </p>
+          </article>
+        ))}
+      </div>
+    </main>
+  );
+}
