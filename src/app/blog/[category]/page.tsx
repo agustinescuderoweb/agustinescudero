@@ -1,11 +1,16 @@
 import Link from "next/link";
 import { getPosts } from "@/lib/posts";
 
-export default function CategoryPage({
+export default async function CategoryPage({
   params,
 }: {
-  params: { category: string };
+  params: Promise<{
+    category: string;
+  }>;
 }) {
+
+  const { category } = await params;
+
   const posts = getPosts();
 
   const filteredPosts = posts.filter(
@@ -14,13 +19,13 @@ export default function CategoryPage({
       slug: string;
       excerpt: string;
       category: string;
-    }) => post.category === params.category
+    }) => post.category === category
   );
 
   return (
     <main className="max-w-4xl mx-auto py-10 px-4">
       <h1 className="text-5xl font-bold capitalize mb-10">
-        {params.category}
+        {category}
       </h1>
 
       <div className="space-y-8">
