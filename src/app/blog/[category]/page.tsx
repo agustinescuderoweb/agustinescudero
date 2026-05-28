@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { getPosts } from "@/lib/posts";
+import BackButton from "../../components/BackButton";
 
 export default async function CategoryPage({
   params,
@@ -24,9 +25,12 @@ export default async function CategoryPage({
 
   return (
     <main className="max-w-4xl mx-auto py-10 px-4">
-      <h1 className="text-5xl font-bold capitalize mb-10">
+
+      <div className="mb-20" ><BackButton /></div>
+
+      <div><h1 className="text-5xl font-bold capitalize mb-10">
         {category}
-      </h1>
+      </h1></div>
 
       <div className="space-y-8">
         {filteredPosts.map((post: {

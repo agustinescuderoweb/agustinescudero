@@ -2,6 +2,7 @@ import { getPostBySlug, getPosts } from "@/lib/posts";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import BlogImage from "../../../components/BlogImage";
 import BlogCTA from "../../../components/BlogCTA";
+import BackButton from "../../../components/BackButton";
 
 const components = {
   BlogImage,
@@ -46,7 +47,11 @@ export default async function PostPage({
 
   return (
     <main className="min-h-screen bg-neutral-950 text-zinc-100">
+
+
       <article className="max-w-4xl mx-auto px-6 py-24">
+
+          <div className="mb-20" ><BackButton /></div>
         
         {/* CATEGORY */}
         <span className="text-xs uppercase tracking-[0.25em] text-zinc-500 font-medium">

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import BackButton from "../components/BackButton";
 
 const categories = [
   {
@@ -32,10 +33,15 @@ const categories = [
 
 export default function BlogPage() {
   return (
-    <main className="max-w-6xl mx-auto pt-17 lg:pt-52 pb-20 px-4">
-      <h1 className="text-5xl font-bold mb-22">
+    <main className="max-w-6xl mx-auto pt-2 lg:pt-22 pb-2 px-4 gap-10"> 
+       
+       <div className="mb-20" ><BackButton /></div>
+       
+      <div>
+      <h1 className="flex items-center justify-center text-5xl font-bold mb-22">
         Blog
       </h1>
+      </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
         {categories.map((category) => (
