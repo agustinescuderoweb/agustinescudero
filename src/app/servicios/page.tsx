@@ -1,6 +1,6 @@
 import React from 'react'
 import Menu from '../componetes/inicio/menu'
-import Header from './header'
+import Header from './headernew'
 import Footer from '../componetes/inicio/footer'
 
 

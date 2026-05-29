@@ -39,15 +39,65 @@ const toggleMenu = () => {
       <div className={`${styles.items} ${isOpen ? styles.show : ''}`}>
         <Link href="/" className="text-black" title="Ir al inicio">Inicio</Link>
         <div className={styles.dropdown}>
-          <span className={styles.dropdownToggle} onClick={toggleDropdown}><Link href="/servicios" className="text-black !no-underline" title="Ver servicios">Servicios Web</Link></span>
-              <div className={`${styles.dropdownMenu} ${isDropdownOpen ? styles.dropdownVisible : ''}`}>
-                <Link href="/servicios/landing" className="!no-underline"><h3 className="text-white sm:text-black">Landing Page</h3></Link>
-                <Link href="/servicios/sitios" className="!no-underline"><h3  className="text-white sm:text-black">Sitios Web</h3></Link>
-                <Link href="/servicios/ecommerce" className="!no-underline"><h3  className="text-white sm:text-black">Ecommerce</h3></Link>
-            </div>
-        </div>
-       {/* <Link href="/publicidad" className="text-black !no-underline" title="Publicidad">Publicidad Online</Link> */}
-        <Link href="/portafolio" className="text-black !no-underline" title="Conocer quién soy">Portafolio</Link>
+  <div
+    className={styles.dropdownToggle}
+    onClick={toggleDropdown}
+    style={{ display: 'flex', alignItems: 'center', gap: '8px', cursor: 'pointer' }}
+  >
+    <Link
+      href="/servicios"
+      className="!no-underline"
+      style={{ color: 'rgba(240,237,232,0.7)' }}
+      title="Ver servicios"
+    >
+      Servicios Web
+    </Link>
+
+    <span
+      style={{
+        display: 'inline-flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        width: '20px',
+        height: '20px',
+        borderRadius: '6px',
+        background: 'rgba(163, 230, 53, 0.12)',
+        border: '0.5px solid rgba(163, 230, 53, 0.3)',
+        flexShrink: 0,
+        transition: 'transform 0.2s ease',
+        transform: isDropdownOpen ? 'rotate(180deg)' : 'rotate(0deg)',
+      }}
+    >
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="10"
+        height="10"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="#a3e635"
+        strokeWidth="3"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      >
+        <path d="M6 9l6 6 6-6" />
+      </svg>
+    </span>
+  </div>
+
+  <div className={`${styles.dropdownMenu} ${isDropdownOpen ? styles.dropdownVisible : ''}`}>
+    <Link href="/servicios/landing" className="!no-underline text-white/70 hover:text-black hover:bg-lime-400 transition-colors duration-200 px-4 py-2 block">
+      Landing Page
+    </Link>
+    <Link href="/servicios/sitios" className="!no-underline text-white/70 hover:text-black hover:bg-lime-400 transition-colors duration-200 px-4 py-2 block">
+      Sitios Web
+    </Link>
+    <Link href="/servicios/ecommerce" className="!no-underline text-white/70 hover:text-black hover:bg-lime-400 transition-colors duration-200 px-4 py-2 block">
+      Ecommerce
+    </Link>
+  </div>
+</div>
+        <Link href="/ia" className="text-black !no-underline" title="Inteligencia Artificial">Inteligencia Artificial</Link>
+        <Link href="/portafolio" className="text-black !no-underline" title="Portafolio">Portafolio</Link>
         <Link href="/blog" className="text-black !no-underline" title="Blog">Blog</Link>
         <Link href="/contactos" className="text-black !no-underline" title="Formulario de contacto">Contactos</Link>
       </div>

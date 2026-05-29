@@ -1,54 +1,61 @@
+/* ─── CONTENEDOR NAVBAR ─────────────────────────────────────── */
 .contenedor {
-    position: relative;
-    max-width: 1920px;
-    padding: 0 40px; 
-    margin: 30px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: 12px;
-    font-size: 22px;
-    color: black;
-    font-family: "Kanit", sans-serif;
-    font-style: normal;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  background-color: rgba(10, 10, 10, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 0.5px solid rgba(255, 255, 255, 0.07);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 48px;
+  height: 110px;
+  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 20px;
+  color: #f0ede8;
 }
 
+/* ─── LOGO ───────────────────────────────────────────────────── */
 .logo {
-    width: 100px;
-    border-radius: 50px;
-    box-shadow: 0px 0px 7px white;
-    margin: 0;
+  width: 88px;
+  border-radius: 50%;
+  opacity: 0.95;
+  transition: opacity 0.2s ease;
 }
 
-.menuButton {
-    display: none;
+.logo:hover {
+  opacity: 1;
 }
 
-.image {
-    width: 100px;
-    margin: 30px;
-    border-radius: 70%;
-    box-shadow: 0px 0px 10px black;
-}
-
-.imagen {
-    border-radius: 50%;
-}
-
+/* ─── ITEMS ──────────────────────────────────────────────────── */
 .items {
-    display: flex;
-    gap: 50px;
-    margin-top: 30px;
-    color: black;
-    text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 36px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: rgba(240, 237, 232, 0.65);
+  text-decoration: none;
 }
 
-
-.items > Link {
-    display: none;
-    
+.items a {
+  color: rgba(240, 237, 232, 0.65);
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: 500;
+  transition: color 0.2s ease;
 }
 
+.items a:hover {
+  color: #f0ede8;
+}
+
+/* ─── DROPDOWN ───────────────────────────────────────────────── */
 .dropdown {
   position: relative;
   display: inline-block;
@@ -56,28 +63,54 @@
 
 .dropdownToggle {
   cursor: pointer;
-  display: block;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: white;
+  transition: color 0.2s ease;
+}
+
+.dropdownToggle:hover {
+  color: #f0ede8;
 }
 
 .dropdownMenu {
   display: none;
+  color: white;
   position: absolute;
-  width: 200px;
-  top: 70%;
+  top: calc(100%);
   left: 0;
-  background-color: white;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px rgba(0,0,0,0.2);
-  z-index: 15;
+  min-width: 180px;
+  background-color: #111111;
+  border: 0.5px solid rgba(255, 255, 255, 0.09);
+  border-radius: 12px;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.5);
+  z-index: 200;
   flex-direction: column;
+  overflow: hidden;
   pointer-events: none;
 }
 
 .dropdownMenu a {
-  color: black;
-  padding: 12px 16px;
+  color: rgba(240, 237, 232, 0.65);
+  padding: 17px 25px;
+  font-size: 0.85rem;
+  font-weight: 500;
   text-decoration: none;
   display: block;
+  transition: background 0.40s ease, color 0.40s ease;
+  border-bottom: 0.5px solid rgba(255, 255, 255, 0.05);
+}
+
+.dropdownMenu a:last-child {
+  border-bottom: none;
+}
+
+.dropdownMenu a:hover {
+  background-color: white;
+  color: black;
 }
 
 .dropdown:hover .dropdownMenu {
@@ -87,76 +120,106 @@
 
 .dropdownVisible {
   display: flex !important;
+  pointer-events: auto;
 }
 
+/* ─── MENU BUTTON (mobile) ───────────────────────────────────── */
+.menuButton {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #f0ede8;
+  padding: 8px;
+  border-radius: 8px;
+  transition: background 0.2s ease;
+}
+
+.menuButton:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+/* ─── RESPONSIVE ─────────────────────────────────────────────── */
 @media (max-width: 768px) {
+  .contenedor {
+    flex-wrap: wrap;
+    height: auto;
+    align-items: center;
+    height: 160px;
+  }
 
-    
-    .contenedor {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: start;
-        padding: 0;
-    }
+  .header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 68px;
+  }
 
+  .menuButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #111111;
+  }
 
-    .menuButton {
-      display: block;
-      padding: 30px;
-      font-size: 25px;
-    }
+  .items {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    gap: 0;
+    padding: 0;
+    border-top: 0.5px solid rgba(255, 255, 255, 0.06);
+    background-color: #111111;
+    border-radius: 5%;
+  }
 
-    .items {
-        height: 100%;
-    }
+  .items a {
+    padding: 30px 44px;
+    width: 100%;
+    font-size: 0.95rem;
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.04);
+  }
 
-    .logo {
-        margin: 20px;
-    }
+  .show {
+    display: flex;
+  }
 
-    .header {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        gap: 200px;
-    }
-  
-    .items {
-        display: none;
-        flex-direction: column;
-        justify-content: start;
-        align-items: center;
-        padding: 30px;
-        width: 100%;
-        text-align: center;
-        background-color: white;
-        height: 1920px;
-      }
+  .dropdown {
+    width: 100%;
+  }
 
-      
-    .show {
-        display: flex;
-        flex-direction: column;
-        padding: 30px;
-        width: 100%;
-        text-align: center;
-    }
-    
+  .dropdownToggle {
+    padding: 12px 4px;
+    width: 100%;
+    font-size: 0.95rem;
+    border-bottom: 0.5px solid rgba(255, 255, 255, 0.04);
+  }
 
-      .dropdownMenu {
+  .dropdownMenu {
     position: static;
     box-shadow: none;
-    margin-top: 50px;
-    background-color: #737373;
-    display: none;
-    }
-
-    .dropdown:hover .dropdownMenu {
-    display: none;
-    }
-    .dropdownToggle:active + .dropdownMenu,
-    .dropdownToggle:focus + .dropdownMenu {
-    display: block;
-    }
+    border: none;
+    border-radius: 0;
+    background-color: rgba(163, 230, 53, 0.04);
+    border-left: 2px solid rgba(163, 230, 53, 0.25);
+    margin: 4px 0 8px 8px;
   }
+
+  .dropdownMenu a {
+    font-size: 0.875rem;
+    padding: 10px 16px;
+    border-bottom: none;
+
+  }
+
+  .dropdown:hover .dropdownMenu {
+    display: none;
+  }
+
+  .dropdownVisible {
+    display: flex !important;
+  }
+}

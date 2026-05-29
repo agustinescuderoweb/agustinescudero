@@ -1,80 +1,70 @@
-import Link from "next/link";
+import Link from 'next/link'
 
 export default function BlogCTA() {
   return (
-    <div
-      className="
-        mt-20
-        rounded-3xl
-        border
-        border-zinc-800
-        bg-zinc-900
-        p-10
-      "
-    >
-      <div className="max-w-2xl">
+    <div className="
+      mt-16
+      rounded-2xl
+      bg-[#111111]
+      border border-white/[0.07]
+      p-8 md:p-10
+      relative overflow-hidden
+    ">
 
-        <span className="text-sm uppercase tracking-[0.25em] text-zinc-500">
+      {/* Acento decorativo */}
+      <div className="absolute top-0 left-0 right-0 h-[2px] bg-lime-400 rounded-t-2xl" />
+
+      <div className="max-w-xl">
+
+        <span className="text-lime-400 text-xs font-semibold tracking-[0.18em] uppercase">
           Potenciá tu negocio
         </span>
 
-        <h3 className="text-3xl md:text-4xl font-bold tracking-tight mt-4">
+        <h3 className="mt-4 text-2xl md:text-3xl font-bold tracking-tight text-[#f0ede8] leading-tight">
           ¿Querés conseguir más clientes desde internet?
         </h3>
 
-        <p className="mt-6 text-zinc-300 leading-8 text-lg">
+        <p className="mt-4 text-white/45 leading-relaxed text-[0.95rem]">
           Puedo ayudarte a crear una presencia online moderna,
           optimizada para Google y enfocada en generar resultados
           reales para tu negocio.
         </p>
 
-        <div className="flex flex-wrap gap-4 mt-8">
-
-
-          <Link
-              href="/contacto"
-              className="
-                inline-flex
-                items-center
-                justify-center
-                rounded-2xl
-                px-6
-                py-3
-                font-medium
-                text-black-200
-                transition-all
-                duration-300
-
-                hover:bg-gray-200
-
-                active:scale-[0.98]
-              "
-            >
-              Solicitar información
-            </Link>
+        <div className="flex flex-wrap gap-3 mt-8">
 
           <a
-            href="https://wa.me/TUNUMERO"
-            target="_blank"
-             className="
-                 rounded-2xl
-                 border
-                 border-green-500/30
-                 bg-green-500
-                 px-6
-                 py-3
-                 font-medium
-                 text-white
-                 transition
-                 hover:bg-green-400
-                 hover:shadow-[0_0_30px_rgba(34,197,94,0.35)]
-               "
-              >
-            WhatsApp
-          </a>
+          href="https://wa.me/TUNUMERO"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="
+                inline-flex items-center gap-2
+                bg-lime-400 text-[#0a0a0a]
+                px-6 py-3 rounded-[10px]
+                text-sm font-semibold
+                transition-all duration-200
+                hover:bg-lime-300 hover: hover:-translate-y-[2px]
+                !no-underline
+              "
+            >
+              WhatsApp
+            </a>            
+          <Link
+            href="/contacto"
+            className="
+              inline-flex items-center gap-2
+              border border-white/[0.15] text-white/70
+              px-6 py-3 rounded-[10px]
+              text-sm font-medium
+              transition-all duration-200
+              hover:border-lime-400/30 hover:text-white hover:-translate-y-[2px]
+              !no-underline
+            "
+          >
+            Solicitar información
+          </Link>
 
         </div>
       </div>
     </div>
-  );
+  )
 }
