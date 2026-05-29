@@ -75,7 +75,7 @@ export default function Testimonios() {
 
               {/* Texto */}
               <p className="text-[0.9rem] text-white/55 leading-relaxed flex-1">
-                "{t.texto}"
+                   &ldquo;{t.texto}&rdquo;
               </p>
 
               {/* Autor */}
