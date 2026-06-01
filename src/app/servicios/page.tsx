@@ -1,23 +1,21 @@
 import React from 'react'
+import Head from 'next/head'
 import Menu from '../componetes/inicio/menu'
 import Header from './headernew'
 import Footer from '../componetes/inicio/footer'
 
-
-export const metadata = {
-  title: 'Landing Page Profesional | Agustín Escudero',
-  description:
-    'Webs que generan clientes + SEO para emprendedores y marcas personales',
-};
-
-
 function Page() {
   return (
-    <div>
+    <>
+      <Head>
+        <title>Landing Page Profesional | Agustín Escudero</title>
+        <meta name="description" content="Diseño de landing pages profesionales en Mendoza optimizadas para SEO. Páginas rápidas, modernas y pensadas para convertir visitas en clientes reales." />
+        <meta name="robots" content="index, follow" />
+      </Head>
       <Menu />
       <Header />
       <Footer />
-    </div>
+    </>
   )
 }
 

@@ -1,17 +1,19 @@
 import styles from "./page.module.css";
+import Menu from '../componetes/inicio/menu'
+import Footer from '../componetes/inicio/footer'
 
 export default function Page() {
   return (
     <main className={styles.page}>
+       <Menu />
       <div className={styles.wrapper}>
 
         {/* HERO */}
         <section className={styles.hero}>
           <div>
-            <h2 className={styles.heroTitle}>
-              Automatizá tu negocio con Inteligencia Artificial
-            </h2>
-
+         <h1 className={styles.heroTitle}>
+            Chatbots con Inteligencia Artificial para negocios en Mendoza
+          </h1>
             <p className={styles.heroSubtitle}>
               Chatbots que responden por vos 24/7, ahorran tiempo y te ayudan a vender más sin contratar personal.
             </p>
@@ -130,6 +132,7 @@ export default function Page() {
         </section>
 
       </div>
+      <Footer />
     </main>
   );
 }
