@@ -13,6 +13,7 @@ import pc from '../../../../public/pc.jpg'
 import meraki from '../../../../public/meraki.jpg'
 import analisis from '../../../../public/analisis.jpeg'
 import ferrari from '../../../../public/ferrari.jpg'
+import wine from '../../../../public/wine.jpg'
 
 const proyectos = [
    {
@@ -26,6 +27,12 @@ const proyectos = [
     categoria: 'Ropa Montaña',
     img: huellas,
     url: 'http://www.huellasandinasmountainshop.com.ar/',
+  },
+  {
+    titulo: 'MendoWine',
+    categoria: 'Vinoteca',
+    img: wine,
+    url: 'https://mendowine.agustinescuderoweb.com/',
   },
   {
     titulo: 'MendoTour',
