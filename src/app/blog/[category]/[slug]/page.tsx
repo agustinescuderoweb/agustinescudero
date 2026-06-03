@@ -104,12 +104,6 @@ export default async function PostPage({
               prose-li:text-white/55
               prose-li:leading-relaxed
 
-              prose-a:text-lime-400
-              prose-a:no-underline
-              prose-a:font-medium
-              hover:prose-a:text-lime-300
-              hover:prose-a:underline
-
               prose-blockquote:border-l-lime-400
               prose-blockquote:border-l-2
               prose-blockquote:text-white/40

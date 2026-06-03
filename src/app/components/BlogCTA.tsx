@@ -33,21 +33,22 @@ export default function BlogCTA() {
         <div className="flex flex-wrap gap-3 mt-8">
 
           <a
-          href="https://wa.me/TUNUMERO"
+              href="https://wa.me/+5492612388045"
               target="_blank"
               rel="noopener noreferrer"
               className="
                 inline-flex items-center gap-2
-                bg-lime-400 text-[#0a0a0a]
-                px-6 py-3 rounded-[10px]
+                bg-lime-400 text-black
+                 px-6 py-3 rounded-[10px]
                 text-sm font-semibold
                 transition-all duration-200
-                hover:bg-lime-300 hover: hover:-translate-y-[2px]
-                !no-underline
-              "
+                hover:bg-lime-300 hover:text-black
+                hover:-translate-y-[2px]
+                no-underline
+               "
             >
-              WhatsApp
-            </a>            
+               WhatsApp
+            </a>      
           <Link
             href="/contacto"
             className="
