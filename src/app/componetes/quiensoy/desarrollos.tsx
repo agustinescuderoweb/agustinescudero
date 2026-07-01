@@ -3,8 +3,6 @@ import Image from 'next/image'
 import styles from './desarrollos.module.css'
 import peni from '../../../../public/peni.jpg'
 import huellas from '../../../../public/montaña.jpg'
-import mendotour from '../../../../public/mendotour.jpeg'
-import caribe from '../../../../public/caribe.jpg'
 import turismo from '../../../../public/turismo.jpg'
 import abogado from '../../../../public/abogado.jpg'
 import dentista from '../../../../public/dentista.jpg'
@@ -13,7 +11,7 @@ import pc from '../../../../public/pc.jpg'
 import meraki from '../../../../public/meraki.jpg'
 import analisis from '../../../../public/analisis.jpeg'
 import ferrari from '../../../../public/ferrari.jpg'
-import wine from '../../../../public/wine.jpg'
+
 
 const proyectos = [
    {
