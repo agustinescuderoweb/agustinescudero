@@ -28,24 +28,24 @@ const proyectos = [
     img: huellas,
     url: 'http://www.huellasandinasmountainshop.com.ar/',
   },
-  {
+  /*{
     titulo: 'MendoWine',
     categoria: 'Vinoteca',
     img: wine,
     url: 'https://mendowine.agustinescuderoweb.com/',
-  },
-  {
+  }, */
+  /* {
     titulo: 'MendoTour',
     categoria: 'Turismo',
     img: mendotour,
     url: 'https://mendotour.agustinescuderoweb.com/',
-  },
-  {
+  }, */
+  /* {
     titulo: 'Turismo Caribe',
     categoria: 'Turismo',
     img: caribe,
     url: 'https://turismocaribe.agustinescuderoweb.com/',
-  },
+  }, */
   {
     titulo: 'Turismo Aventura',
     categoria: 'Turismo',
