@@ -11,6 +11,7 @@ import pc from '../../../../public/pc.jpg'
 import meraki from '../../../../public/meraki.jpg'
 import analisis from '../../../../public/analisis.jpeg'
 import ferrari from '../../../../public/ferrari.jpg'
+import mendotour from '../../../../public/mendotour.jpeg'
 
 
 const proyectos = [
@@ -32,7 +33,7 @@ const proyectos = [
     img: wine,
     url: 'https://mendowine.agustinescuderoweb.com/',
   }, */
-  /* {
+   {
     titulo: 'MendoTour',
     categoria: 'Turismo',
     img: mendotour,

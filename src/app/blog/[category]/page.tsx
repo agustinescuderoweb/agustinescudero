@@ -8,7 +8,8 @@ const categoryLabels: Record<string, { title: string; description: string }> = {
     title: 'Marketing Digital',
     description: 'Artículos sobre estrategias digitales para conseguir más clientes y ventas en Mendoza y Argentina.',
   },
-  'sitios-web': {
+
+  "sitios-web": {
     title: 'Sitios Web',
     description: 'Recursos y guías sobre desarrollo de páginas web modernas, rápidas y profesionales.',
   },
