@@ -38,7 +38,7 @@ const proyectos = [
     categoria: 'Turismo',
     img: mendotour,
     url: 'https://mendotour.agustinescuderoweb.com/',
-  }, */
+  },
   /* {
     titulo: 'Turismo Caribe',
     categoria: 'Turismo',
