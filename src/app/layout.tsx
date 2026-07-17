@@ -1,4 +1,5 @@
 import { Geist, Geist_Mono } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import { Kanit } from 'next/font/google'
 import type { Metadata } from 'next'
@@ -20,12 +21,33 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  icons: {
-    icon: '/logo.ico',        // favicon clásico
-    shortcut: '/logo.ico',    // acceso directo
-    apple: '/logo.png',       // icono para iPhone al guardar en pantalla inicio
+  title: "Diseño Web para Emprendedores | Agustín Escudero",
+  description:
+    "Desarrollo de páginas web, landing pages y tiendas online optimizadas para generar clientes.",
+
+  openGraph: {
+    title: "Agustín Escudero | Desarrollo Web",
+    description:
+      "Creamos sitios web rápidos y optimizados para Google.",
+    url: "https://www.agustinescuderoweb.com",
+    siteName: "Agustín Escudero",
+    images: [
+      {
+        url: "/logoopen.png",
+        width: 1200,
+        height: 630,
+      },
+    ],
+    locale: "es_AR",
+    type: "website",
   },
-}
+
+  icons: {
+    icon: "/logo.ico",
+    shortcut: "/logo.ico",
+    apple: "/logo.png",
+  },
+};
 
 export default function RootLayout({
   children,
@@ -34,9 +56,30 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="es">
-      <body className={`${kanit.className} ${geistSans.variable} ${geistMono.variable} antialiased`}>
+
+      <Script
+        src="https://www.googletagmanager.com/gtag/js?id=G-81Q9W2LL4J"
+        strategy="afterInteractive"
+      />
+
+      <Script id="google-analytics" strategy="afterInteractive">
+        {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'G-81Q9W2LL4J', {
+          page_path: window.location.pathname,
+         });
+        `}
+      </Script>
+
+      <body
+        className={`${kanit.className} ${geistSans.variable} ${geistMono.variable} antialiased`}
+      >
         {children}
       </body>
     </html>
   );
 }
+
