@@ -3,29 +3,36 @@ import BackButton from '../components/BackButton'
 import Head from 'next/head'
 
 const categories = [
+ 
   {
-    slug: 'marketing',
-    title: 'Marketing',
-    description: 'Estrategias digitales para conseguir más clientes y ventas.',
+    slug: 'paginas-web',
+    title: 'Páginas Web',
+    description: 'Diseño y desarrollo de páginas web profesionales para emprendedores, empresas y negocios que buscan vender más online.',
     tag: '01',
   },
-  {
-    slug: 'sitios-web',
-    title: 'Sitios Web',
-    description: 'Desarrollo de páginas web modernas, rápidas y profesionales.',
+   {
+    slug: 'ecommerce',
+    title: 'Ecommerce',
+    description: 'Estrategias para crear tiendas online, mejorar conversiones y vender productos por internet.',
     tag: '02',
   },
   {
     slug: 'seo',
     title: 'SEO',
-    description: 'Posicionamiento en Google y tráfico orgánico para negocios.',
+    description: 'Estrategias SEO para aparecer en Google, aumentar visitas y conseguir clientes desde internet.',
     tag: '03',
   },
   {
-    slug: 'ia',
-    title: 'IA',
-    description: 'Automatización e inteligencia artificial aplicada a negocios.',
+    slug: 'inteligencia-artificial',
+    title: 'Inteligencia Artificial',
+    description: 'Herramientas de inteligencia artificial para automatizar procesos y mejorar negocios.',
     tag: '04',
+  },
+   {
+    slug: 'marketing-digital',
+    title: 'Marketing Digital',
+    description: 'Estrategias digitales para captar clientes, mejorar conversiones y hacer crecer negocios.',
+    tag: '05',
   },
 ]
 
@@ -62,7 +69,7 @@ export default function BlogPage() {
               Artículos y recursos
             </h1>
             <p className="mt-4 text-white/45 text-[0.95rem] leading-relaxed max-w-lg">
-              Contenido sobre desarrollo web, marketing digital, SEO e inteligencia artificial.
+              Aprende cómo crear páginas web profesionales, mejorar el SEO de tu negocio, vender online y aprovechar la inteligencia artificial para conseguir más clientes.
             </p>
           </div>
 
