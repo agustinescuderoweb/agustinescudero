@@ -12,11 +12,32 @@ import analisis from '../../../../public/analisis.jpeg'
 import ferrari from '../../../../public/ferrari.jpg'
 import sorteo from '../../../../public/sorteo.jpg'
 import mundial from '../../../../public/mundial.jpg'
+import tenesis from '../../../../public/tenesis.jpg'
+import clara from '../../../../public/clara.png'
 
 
 
 const proyectos = [
+  
    {
+    titulo: 'Asistente IA',
+    categoria: 'Chat Bot IA',
+    img: tenesis,
+    url: 'https://chatbot-vercel-rho.vercel.app/',
+  },
+
+
+   {
+    titulo: 'Asistente IA Entranamiento',
+    categoria: 'Chat Bot IA + Datos',
+    img: clara,
+    url: 'https://chatfitsupabase.vercel.app/',
+  },
+
+
+
+
+  {
     titulo: 'Limite Vertical',
     categoria: 'Turismo',
     img: peni,
