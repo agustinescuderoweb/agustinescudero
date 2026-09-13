@@ -2,7 +2,6 @@ import React from 'react'
 import Image from 'next/image'
 import styles from './desarrollos.module.css'
 import peni from '../../../../public/peni.jpg'
-import huellas from '../../../../public/montaña.jpg'
 import turismo from '../../../../public/turismo.jpg'
 import abogado from '../../../../public/abogado.jpg'
 import dentista from '../../../../public/dentista.jpg'
@@ -11,7 +10,9 @@ import pc from '../../../../public/pc.jpg'
 import meraki from '../../../../public/meraki.jpg'
 import analisis from '../../../../public/analisis.jpeg'
 import ferrari from '../../../../public/ferrari.jpg'
-import mendotour from '../../../../public/mendotour.jpeg'
+import sorteo from '../../../../public/sorteo.jpg'
+import mundial from '../../../../public/mundial.jpg'
+
 
 
 const proyectos = [
@@ -21,30 +22,48 @@ const proyectos = [
     img: peni,
     url: 'https://limiteverticalmza.com/',
   },
-  {
+ /* {
     titulo: 'Huellas Andinas',
     categoria: 'Ropa Montaña',
     img: huellas,
     url: 'http://www.huellasandinasmountainshop.com.ar/',
-  },
+  }, */
   /*{
     titulo: 'MendoWine',
     categoria: 'Vinoteca',
     img: wine,
     url: 'https://mendowine.agustinescuderoweb.com/',
   }, */
-   {
+  /* {
     titulo: 'MendoTour',
     categoria: 'Turismo',
     img: mendotour,
     url: 'https://mendotour.agustinescuderoweb.com/',
-  },
+  }, */
   /* {
     titulo: 'Turismo Caribe',
     categoria: 'Turismo',
     img: caribe,
     url: 'https://turismocaribe.agustinescuderoweb.com/',
   }, */
+
+   {
+    titulo: 'Sorteo Turismo',
+    categoria: 'Sistema + Base de datos',
+    img: sorteo,
+    url: ' https://bonokids.wolftravel.com.ar/',
+  },
+
+  
+   {
+    titulo: 'Promoción Mundial',
+    categoria: 'Web Promocional + Sistema de correos',
+    img: mundial,
+    url: 'https://mundial.wolftravel.com.ar/',
+  },
+
+
+ 
   {
     titulo: 'Turismo Aventura',
     categoria: 'Turismo',
