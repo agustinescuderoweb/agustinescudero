@@ -1,5 +1,8 @@
+"use client"
+
 import Link from "next/link"
 import { ArrowRight, type LucideIcon } from "lucide-react"
+import { trackEvent as trackWebIntelligenceEvent } from "@/lib/web-intelligence"
 
 type Variant = "primary" | "outline" | "ghost"
 
@@ -11,6 +14,10 @@ interface ButtonProps {
   showArrow?: boolean
   external?: boolean
   className?: string
+  /** Nombre del evento a trackear al hacer click (ej. "cta_click"). */
+  trackEvent?: string
+  /** Metadata del evento de tracking (ej. {cta: "web_business", location: "hero"}). */
+  trackMetadata?: Record<string, unknown>
 }
 
 const variantClasses: Record<Variant, string> = {
@@ -29,9 +36,15 @@ export default function Button({
   showArrow = false,
   external = false,
   className = "",
+  trackEvent,
+  trackMetadata,
 }: ButtonProps) {
   const base =
     "inline-flex items-center justify-center gap-2 rounded-[10px] px-6 py-3 text-sm font-semibold transition-all duration-200 !no-underline"
+
+  const handleClick = trackEvent
+    ? () => trackWebIntelligenceEvent(trackEvent, trackMetadata)
+    : undefined
 
   const content = (
     <>
@@ -54,6 +67,7 @@ export default function Button({
         href={href}
         target="_blank"
         rel="noopener noreferrer"
+        onClick={handleClick}
         className={classes}
       >
         {content}
@@ -62,7 +76,7 @@ export default function Button({
   }
 
   return (
-    <Link href={href} className={classes}>
+    <Link href={href} onClick={handleClick} className={classes}>
       {content}
     </Link>
   )

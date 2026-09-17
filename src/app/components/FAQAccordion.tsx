@@ -2,10 +2,19 @@
 
 import { useState } from "react"
 import { ChevronDown } from "lucide-react"
+import { trackEvent } from "@/lib/web-intelligence"
 import type { FaqItem } from "@/data/faq"
 
 export default function FAQAccordion({ items }: { items: FaqItem[] }) {
   const [openIndex, setOpenIndex] = useState<number | null>(0)
+
+  const toggle = (index: number, question: string, isOpen: boolean) => {
+    setOpenIndex(isOpen ? null : index)
+
+    if (!isOpen) {
+      trackEvent("faq_interaction", { question })
+    }
+  }
 
   return (
     <div className="flex flex-col">
@@ -16,7 +25,7 @@ export default function FAQAccordion({ items }: { items: FaqItem[] }) {
           <div key={item.question} className="border-b border-border">
             <button
               type="button"
-              onClick={() => setOpenIndex(isOpen ? null : index)}
+              onClick={() => toggle(index, item.question, isOpen)}
               aria-expanded={isOpen}
               className="flex w-full items-center justify-between gap-4 py-6 text-left"
             >

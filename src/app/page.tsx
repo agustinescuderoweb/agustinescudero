@@ -74,6 +74,8 @@ export default function Page() {
             external
             variant="outline"
             showArrow
+            trackEvent="whatsapp_click"
+            trackMetadata={{ source: "custom_development" }}
           >
             Contame tu proyecto
           </Button>
@@ -145,7 +147,13 @@ export default function Page() {
           </div>
 
           <div className="mt-12 flex justify-center">
-            <Button href="/portafolio" variant="outline" showArrow>
+            <Button
+              href="/portafolio"
+              variant="outline"
+              showArrow
+              trackEvent="cta_click"
+              trackMetadata={{ cta: "ver_portfolio", location: "portfolio_section" }}
+            >
               Ver todo el portfolio
             </Button>
           </div>
@@ -209,11 +217,18 @@ export default function Page() {
       <CTASection
         title="Tu próxima web puede empezar hoy."
         subtitle="Contanos sobre tu negocio y te ayudamos a elegir la solución adecuada."
-        primaryCta={{ href: "/contactos", label: "Quiero mi sitio web" }}
+        primaryCta={{
+          href: "/contactos",
+          label: "Quiero mi sitio web",
+          trackEvent: "cta_click",
+          trackMetadata: { cta: "quiero_mi_sitio_web", location: "final_cta" },
+        }}
         secondaryCta={{
           href: waLink("Hola Agustín, quiero info sobre mi web"),
           label: "Hablar por WhatsApp",
           external: true,
+          trackEvent: "whatsapp_click",
+          trackMetadata: { source: "final_cta" },
         }}
         note="Web Business · Ecommerce Business · Desarrollo a medida"
       />

@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import PortfolioCard from "./PortfolioCard"
+import { useTrackOnVisible } from "@/lib/useTrackOnVisible"
 import { proyectos, type ProyectoTipo } from "@/data/proyectos"
 
 const filters: { label: string; value: ProyectoTipo | "todos" }[] = [
@@ -13,6 +14,7 @@ const filters: { label: string; value: ProyectoTipo | "todos" }[] = [
 
 export default function PortfolioGrid() {
   const [filter, setFilter] = useState<ProyectoTipo | "todos">("todos")
+  const ref = useTrackOnVisible<HTMLDivElement>("portfolio_view", {})
 
   const filtered =
     filter === "todos"
@@ -20,7 +22,7 @@ export default function PortfolioGrid() {
       : proyectos.filter((proyecto) => proyecto.tipo === filter)
 
   return (
-    <div>
+    <div ref={ref}>
       <div className="mb-10 flex flex-wrap gap-2">
         {filters.map((item) => (
           <button

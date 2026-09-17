@@ -1,12 +1,23 @@
+"use client"
+
 import { Check } from "lucide-react"
 import Button from "./Button"
+import { useTrackOnVisible } from "@/lib/useTrackOnVisible"
+import { icons } from "@/lib/icons"
 import type { CarePlan } from "@/data/care"
 
 export default function CareCard({ plan }: { plan: CarePlan }) {
-  const Icon = plan.icon
+  const Icon = icons[plan.icon]
+  const planSlug = plan.name.toLowerCase().replace(/\s+/g, "_")
+  const ref = useTrackOnVisible<HTMLDivElement>("care_plan_view", {
+    plan: planSlug,
+  })
 
   return (
-    <div className="flex flex-col rounded-2xl border border-border bg-surface p-8 transition-all duration-300 hover:border-accent/30">
+    <div
+      ref={ref}
+      className="flex flex-col rounded-2xl border border-border bg-surface p-8 transition-all duration-300 hover:border-accent/30"
+    >
       <div className="mb-5 flex h-11 w-11 items-center justify-center rounded-xl border border-accent/25 bg-accent/10">
         <Icon size={20} className="text-accent" />
       </div>
@@ -26,7 +37,14 @@ export default function CareCard({ plan }: { plan: CarePlan }) {
         ))}
       </ul>
 
-      <Button href={plan.ctaHref} external variant="outline" className="mt-6">
+      <Button
+        href={plan.ctaHref}
+        external
+        variant="outline"
+        className="mt-6"
+        trackEvent="whatsapp_click"
+        trackMetadata={{ source: planSlug }}
+      >
         {plan.ctaLabel}
       </Button>
     </div>

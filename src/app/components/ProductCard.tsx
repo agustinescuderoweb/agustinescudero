@@ -1,12 +1,20 @@
+"use client"
+
 import { Check } from "lucide-react"
 import Button from "./Button"
+import { useTrackOnVisible } from "@/lib/useTrackOnVisible"
+import { icons } from "@/lib/icons"
 import type { Product } from "@/data/products"
 
 export default function ProductCard({ product }: { product: Product }) {
-  const Icon = product.icon
+  const Icon = icons[product.icon]
+  const ref = useTrackOnVisible<HTMLDivElement>("pricing_view", {
+    product: product.slug,
+  })
 
   return (
     <div
+      ref={ref}
       className={`relative flex flex-col rounded-2xl border p-8 transition-all duration-300 md:p-10 ${
         product.featured
           ? "border-accent/30 bg-surface shadow-[0_0_0_1px_rgba(163,230,53,0.1),0_20px_60px_-20px_rgba(163,230,53,0.15)]"
@@ -50,6 +58,8 @@ export default function ProductCard({ product }: { product: Product }) {
         external
         showArrow
         className="mt-8 w-full"
+        trackEvent="whatsapp_click"
+        trackMetadata={{ source: product.slug }}
       >
         {product.ctaLabel}
       </Button>

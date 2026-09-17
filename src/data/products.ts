@@ -1,5 +1,5 @@
-import { Monitor, ShoppingCart, type LucideIcon } from "lucide-react"
 import { waLink } from "@/lib/site"
+import type { IconName } from "@/lib/icons"
 
 export interface ProductFeature {
   label: string
@@ -7,7 +7,7 @@ export interface ProductFeature {
 
 export interface Product {
   slug: string
-  icon: LucideIcon
+  icon: IconName
   name: string
   description: string
   price: string
@@ -21,7 +21,7 @@ export interface Product {
 export const products: Product[] = [
   {
     slug: "web-business",
-    icon: Monitor,
+    icon: "Monitor",
     name: "Web Business",
     description:
       "Para profesionales y empresas que necesitan una presencia digital profesional orientada a generar consultas y clientes.",
@@ -47,7 +47,7 @@ export const products: Product[] = [
   },
   {
     slug: "ecommerce-business",
-    icon: ShoppingCart,
+    icon: "ShoppingCart",
     name: "Ecommerce Business",
     description:
       "Una tienda online profesional configurada para mostrar productos, recibir pagos y gestionar pedidos.",

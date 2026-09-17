@@ -2,66 +2,132 @@
 
 import { useEffect, useMemo, useState } from "react";
 
-type Lead = {
+const API_URL =
+  process.env.NEXT_PUBLIC_WEB_INTELLIGENCE_API_URL || "http://127.0.0.1:8000";
+
+type Session = {
   session_id: string;
-  score: number;
+  total_score: number;
   status: "cold" | "warm" | "hot" | string;
+  intent: "low_intent" | "medium_intent" | "high_intent" | string;
+  primary_interest?: string | null;
+  conversion: boolean;
+  conversion_type?: string | null;
   last_event?: string | null;
   last_page?: string | null;
-  updated_at?: string | null;
+  last_activity?: string | null;
 };
 
-type LeadsResponse = {
+type SessionsResponse = {
   total: number;
-  leads: Lead[];
+  sessions: Session[];
 };
+
+function getStatusLabel(status: string) {
+  if (status === "hot") return "🔥 Hot";
+  if (status === "warm") return "🟡 Warm";
+  return "⚪ Cold";
+}
+
+function timeAgo(iso?: string | null) {
+  if (!iso) return "-";
+  const diffMs = Date.now() - new Date(iso).getTime();
+  const minutes = Math.floor(diffMs / 60000);
+  if (minutes < 1) return "hace instantes";
+  if (minutes < 60) return `hace ${minutes} min`;
+  const hours = Math.floor(minutes / 60);
+  if (hours < 24) return `hace ${hours} h`;
+  return `hace ${Math.floor(hours / 24)} d`;
+}
 
 export default function IntelligencePage() {
-  const [data, setData] = useState<LeadsResponse | null>(null);
-  const [loading, setLoading] = useState(true);
+  const [apiKey, setApiKey] = useState("");
+  const [submittedKey, setSubmittedKey] = useState<string | null>(null);
+  const [data, setData] = useState<SessionsResponse | null>(null);
+  const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
   useEffect(() => {
-    async function loadLeads() {
+    if (submittedKey === null) return;
+
+    async function loadSessions() {
       try {
         setLoading(true);
+        setError("");
 
-        const response = await fetch("http://127.0.0.1:8000/leads", {
+        const response = await fetch(`${API_URL}/sessions?limit=100`, {
           cache: "no-store",
+          headers: submittedKey ? { "X-Admin-Key": submittedKey } : {},
         });
 
-        if (!response.ok) {
-          throw new Error("No se pudieron cargar los leads");
+        if (response.status === 401) {
+          throw new Error("Clave incorrecta");
         }
 
-        const result: LeadsResponse = await response.json();
+        if (!response.ok) {
+          throw new Error("No se pudieron cargar las sesiones");
+        }
 
+        const result: SessionsResponse = await response.json();
         setData(result);
       } catch (err) {
         console.error(err);
-        setError("Error al conectar con Web Intelligence API");
+        setError(
+          err instanceof Error ? err.message : "Error al conectar con la API"
+        );
       } finally {
         setLoading(false);
       }
     }
 
-    loadLeads();
-  }, []);
+    loadSessions();
+  }, [submittedKey]);
 
   const stats = useMemo(() => {
-    const leads = data?.leads ?? [];
+    const sessions = data?.sessions ?? [];
 
     return {
-      visitors: leads.length,
-      warm: leads.filter((lead) => lead.status === "warm").length,
-      hot: leads.filter((lead) => lead.status === "hot").length,
+      visitors: sessions.length,
+      warm: sessions.filter((s) => s.status === "warm").length,
+      hot: sessions.filter((s) => s.status === "hot").length,
     };
   }, [data]);
 
-  function getStatusLabel(status: string) {
-    if (status === "hot") return "🔥 Hot";
-    if (status === "warm") return "🟡 Warm";
-    return "⚪ Cold";
+  if (submittedKey === null) {
+    return (
+      <main className="min-h-screen bg-zinc-950 flex items-center justify-center p-8 text-white">
+        <form
+          onSubmit={(e) => {
+            e.preventDefault();
+            setSubmittedKey(apiKey);
+          }}
+          className="w-full max-w-sm rounded-2xl border border-zinc-800 bg-zinc-900 p-8"
+        >
+          <p className="mb-2 text-sm uppercase tracking-[0.25em] text-zinc-500">
+            Web Intelligence
+          </p>
+          <h1 className="mb-6 text-2xl font-bold">Acceso administrador</h1>
+
+          <label className="mb-2 block text-sm text-zinc-400">
+            Clave de administrador
+          </label>
+          <input
+            type="password"
+            value={apiKey}
+            onChange={(e) => setApiKey(e.target.value)}
+            className="mb-4 w-full rounded-lg border border-zinc-700 bg-zinc-950 px-4 py-2 text-white outline-none focus:border-lime-400"
+            autoFocus
+          />
+
+          <button
+            type="submit"
+            className="w-full rounded-lg bg-lime-400 px-4 py-2 font-semibold text-zinc-950 transition hover:bg-lime-300"
+          >
+            Entrar
+          </button>
+        </form>
+      </main>
+    );
   }
 
   if (loading) {
@@ -76,6 +142,12 @@ export default function IntelligencePage() {
     return (
       <main className="min-h-screen bg-zinc-950 p-8 text-white">
         <p className="text-red-400">{error}</p>
+        <button
+          onClick={() => setSubmittedKey(null)}
+          className="mt-4 text-sm text-zinc-400 underline"
+        >
+          Volver a intentar
+        </button>
       </main>
     );
   }
@@ -88,9 +160,7 @@ export default function IntelligencePage() {
             Web Intelligence
           </p>
 
-          <h1 className="text-4xl font-bold">
-            Clientes potenciales
-          </h1>
+          <h1 className="text-4xl font-bold">Clientes potenciales</h1>
 
           <p className="mt-3 text-zinc-400">
             Visitantes ordenados según su intención comercial.
@@ -100,34 +170,23 @@ export default function IntelligencePage() {
         <section className="mb-10 grid gap-5 md:grid-cols-3">
           <div className="rounded-2xl border border-zinc-800 bg-zinc-900 p-6">
             <p className="text-sm text-zinc-400">Visitantes</p>
-
-            <p className="mt-3 text-4xl font-bold">
-              {stats.visitors}
-            </p>
+            <p className="mt-3 text-4xl font-bold">{stats.visitors}</p>
           </div>
 
           <div className="rounded-2xl border border-zinc-800 bg-zinc-900 p-6">
-            <p className="text-sm text-zinc-400">Interesados</p>
-
-            <p className="mt-3 text-4xl font-bold">
-              {stats.warm}
-            </p>
+            <p className="text-sm text-zinc-400">Warm</p>
+            <p className="mt-3 text-4xl font-bold">{stats.warm}</p>
           </div>
 
           <div className="rounded-2xl border border-zinc-800 bg-zinc-900 p-6">
             <p className="text-sm text-zinc-400">Hot Leads</p>
-
-            <p className="mt-3 text-4xl font-bold">
-              {stats.hot}
-            </p>
+            <p className="mt-3 text-4xl font-bold">{stats.hot}</p>
           </div>
         </section>
 
         <section className="overflow-hidden rounded-2xl border border-zinc-800 bg-zinc-900">
           <div className="border-b border-zinc-800 p-6">
-            <h2 className="text-xl font-semibold">
-              Actividad de visitantes
-            </h2>
+            <h2 className="text-xl font-semibold">Actividad de visitantes</h2>
           </div>
 
           <div className="overflow-x-auto">
@@ -137,46 +196,57 @@ export default function IntelligencePage() {
                   <th className="px-6 py-4">Sesión</th>
                   <th className="px-6 py-4">Score</th>
                   <th className="px-6 py-4">Estado</th>
-                  <th className="px-6 py-4">Último evento</th>
-                  <th className="px-6 py-4">Última página</th>
+                  <th className="px-6 py-4">Intención</th>
+                  <th className="px-6 py-4">Interés</th>
+                  <th className="px-6 py-4">Conversión</th>
+                  <th className="px-6 py-4">Última actividad</th>
                 </tr>
               </thead>
 
               <tbody>
-                {data?.leads.map((lead) => (
+                {data?.sessions.map((session) => (
                   <tr
-                    key={lead.session_id}
+                    key={session.session_id}
                     className="border-t border-zinc-800"
                   >
-                    <td className="max-w-[220px] truncate px-6 py-5 font-mono text-sm">
-                      {lead.session_id}
+                    <td className="max-w-[180px] truncate px-6 py-5 font-mono text-sm">
+                      {session.session_id}
                     </td>
 
                     <td className="px-6 py-5">
                       <span className="text-lg font-bold">
-                        {lead.score}
+                        {session.total_score}
                       </span>
-                      <span className="text-zinc-500"> / 100</span>
                     </td>
 
                     <td className="px-6 py-5">
-                      {getStatusLabel(lead.status)}
+                      {getStatusLabel(session.status)}
                     </td>
 
                     <td className="px-6 py-5 text-zinc-300">
-                      {lead.last_event || "-"}
+                      {session.intent}
                     </td>
 
                     <td className="px-6 py-5 text-zinc-300">
-                      {lead.last_page || "-"}
+                      {session.primary_interest || "-"}
+                    </td>
+
+                    <td className="px-6 py-5 text-zinc-300">
+                      {session.conversion
+                        ? `✅ ${session.conversion_type}`
+                        : "-"}
+                    </td>
+
+                    <td className="px-6 py-5 text-zinc-300">
+                      {timeAgo(session.last_activity)}
                     </td>
                   </tr>
                 ))}
 
-                {data?.leads.length === 0 && (
+                {data?.sessions.length === 0 && (
                   <tr>
                     <td
-                      colSpan={5}
+                      colSpan={7}
                       className="px-6 py-12 text-center text-zinc-500"
                     >
                       Todavía no hay sesiones registradas.

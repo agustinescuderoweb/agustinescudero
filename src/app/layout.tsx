@@ -3,7 +3,6 @@ import Script from "next/script";
 import "./globals.css";
 import { Kanit } from 'next/font/google'
 import type { Metadata } from 'next'
-import WebIntelligence from "./components/WebIntelligence";
 import WebIntelligenceTracker from "./components/WebIntelligenceTracker";
 
 const kanit = Kanit({
@@ -93,7 +92,6 @@ export default function RootLayout({
       <body
         className={`${kanit.className} ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <WebIntelligence />
         <WebIntelligenceTracker />
         {children}
       </body>

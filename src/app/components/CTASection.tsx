@@ -4,6 +4,8 @@ interface CTAAction {
   label: string
   href: string
   external?: boolean
+  trackEvent?: string
+  trackMetadata?: Record<string, unknown>
 }
 
 interface CTASectionProps {
@@ -40,7 +42,13 @@ export default function CTASection({
         )}
 
         <div className="mt-2 flex flex-wrap items-center justify-center gap-4">
-          <Button href={primaryCta.href} external={primaryCta.external} showArrow>
+          <Button
+            href={primaryCta.href}
+            external={primaryCta.external}
+            showArrow
+            trackEvent={primaryCta.trackEvent}
+            trackMetadata={primaryCta.trackMetadata}
+          >
             {primaryCta.label}
           </Button>
 
@@ -49,6 +57,8 @@ export default function CTASection({
               href={secondaryCta.href}
               external={secondaryCta.external}
               variant="outline"
+              trackEvent={secondaryCta.trackEvent}
+              trackMetadata={secondaryCta.trackMetadata}
             >
               {secondaryCta.label}
             </Button>

@@ -3,9 +3,11 @@ import Image from 'next/image'
 import Script from 'next/script'
 import Menu from '@/app/componetes/inicio/menu'
 import Footer from '@/app/componetes/inicio/footer'
+import Button from '@/app/components/Button'
 import ProductCard from '@/app/components/ProductCard'
 import FAQAccordion from '@/app/components/FAQAccordion'
 import CTASection from '@/app/components/CTASection'
+import TrackPageView from '@/app/components/TrackPageView'
 import { products } from '@/data/products'
 import { faq } from '@/data/faq'
 import { waLink } from '@/lib/site'
@@ -43,6 +45,8 @@ export default function Page() {
         })}
       </Script>
 
+      <TrackPageView event="product_view" metadata={{ product: 'ecommerce_business' }} />
+
       <Menu />
 
       <main className="bg-bg text-ink">
@@ -62,14 +66,14 @@ export default function Page() {
             </p>
 
             <div className="flex gap-3 flex-wrap pt-2">
-              <a
+              <Button
                 href={waLink('Hola Agustín, quiero mi Ecommerce Business')}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-accent text-bg px-6 py-3 rounded-[10px] text-sm font-semibold transition-all duration-200 hover:bg-accent-hover hover:-translate-y-[2px] !no-underline"
+                external
+                trackEvent="whatsapp_click"
+                trackMetadata={{ source: 'ecommerce_business' }}
               >
                 Quiero mi Ecommerce
-              </a>
+              </Button>
             </div>
           </div>
 
@@ -114,11 +118,18 @@ export default function Page() {
         <CTASection
           title="¿Listo para vender online?"
           subtitle="Contanos sobre tus productos y te enviamos una propuesta con alcance y tiempos definidos."
-          primaryCta={{ href: '/contactos?producto=ecommerce-business', label: 'Quiero mi Ecommerce' }}
+          primaryCta={{
+            href: '/contactos?producto=ecommerce-business',
+            label: 'Quiero mi Ecommerce',
+            trackEvent: 'cta_click',
+            trackMetadata: { cta: 'ecommerce_business', location: 'product_page_cta' },
+          }}
           secondaryCta={{
             href: waLink('Hola Agustín, quiero mi Ecommerce Business'),
             label: 'Hablar por WhatsApp',
             external: true,
+            trackEvent: 'whatsapp_click',
+            trackMetadata: { source: 'ecommerce_business' },
           }}
         />
       </main>

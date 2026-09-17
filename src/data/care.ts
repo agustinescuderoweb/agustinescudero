@@ -1,8 +1,8 @@
-import { ShieldCheck, ShoppingBag, type LucideIcon } from "lucide-react"
 import { waLink } from "@/lib/site"
+import type { IconName } from "@/lib/icons"
 
 export interface CarePlan {
-  icon: LucideIcon
+  icon: IconName
   name: string
   description: string
   features: string[]
@@ -12,7 +12,7 @@ export interface CarePlan {
 
 export const carePlans: CarePlan[] = [
   {
-    icon: ShieldCheck,
+    icon: "ShieldCheck",
     name: "Web Care",
     description: "Pensado para sitios Web Business.",
     features: [
@@ -28,7 +28,7 @@ export const carePlans: CarePlan[] = [
     ctaHref: waLink("Hola Agustín, quiero consultar sobre el plan Web Care"),
   },
   {
-    icon: ShoppingBag,
+    icon: "ShoppingBag",
     name: "Commerce Care",
     description: "Pensado para ecommerce.",
     features: [

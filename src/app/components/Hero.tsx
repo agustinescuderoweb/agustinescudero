@@ -36,13 +36,20 @@ export default function Hero() {
         </p>
 
         <div className="mt-2 flex flex-wrap items-center justify-center gap-4">
-          <Button href="#productos" showArrow>
+          <Button
+            href="#productos"
+            showArrow
+            trackEvent="cta_click"
+            trackMetadata={{ cta: "ver_soluciones", location: "hero" }}
+          >
             Ver soluciones
           </Button>
           <Button
             href={waLink("Hola Agustín, quiero información sobre mi web")}
             external
             variant="outline"
+            trackEvent="whatsapp_click"
+            trackMetadata={{ source: "hero" }}
           >
             Hablar por WhatsApp
           </Button>

@@ -1,6 +1,6 @@
 "use client"
 
-import { Suspense, useState, type FormEvent } from "react"
+import { Suspense, useRef, useState, type FormEvent } from "react"
 import { useSearchParams } from "next/navigation"
 import { trackEvent } from "@/lib/web-intelligence"
 
@@ -52,6 +52,13 @@ function ContactFormInner() {
   const [status, setStatus] = useState<
     "idle" | "loading" | "success" | "error"
   >("idle")
+  const formStarted = useRef(false)
+
+  const handleFormStart = () => {
+    if (formStarted.current) return
+    formStarted.current = true
+    trackEvent("form_start", {})
+  }
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -111,6 +118,7 @@ function ContactFormInner() {
       action="https://formspree.io/f/xanwnwrv"
       method="POST"
       onSubmit={handleSubmit}
+      onFocusCapture={handleFormStart}
       className="flex flex-col gap-5 rounded-2xl border border-border bg-surface p-8 md:p-10"
     >
       <div className="grid gap-5 md:grid-cols-2">
