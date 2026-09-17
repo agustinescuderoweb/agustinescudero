@@ -1,7 +1,11 @@
+'use client'
+
 import Head from 'next/head'
 import styles from "./page.module.css";
 import Menu from '../componetes/inicio/menu'
 import Footer from '../componetes/inicio/footer'
+import { trackEvent } from "@/lib/web-intelligence";
+
 
 export default function Page() {
   return (
@@ -54,13 +58,18 @@ export default function Page() {
             </ul>
 
             <div className={styles.brochure}>
-              <a
-                href="https://wa.me/5492612388045?text=Hola%20Agust%C3%ADn"
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.btnPrimary}
+             <a
+               href="https://wa.me/5492612388045?text=Hola%20Agust%C3%ADn"
+               target="_blank"
+               rel="noopener noreferrer"
+               onClick={() =>
+                 trackEvent("whatsapp_click", {
+                   source: "primary_button",
+                 })
+               }
+               className={styles.btnPrimary}
               >
-                Hablar por WhatsApp
+               Hablar por WhatsApp
               </a>
 
               <a
@@ -158,15 +167,20 @@ export default function Page() {
 
           <div className={styles.cta}>
             <p>¿Querés ver una demo aplicada a tu negocio?</p>
-
-            <a
-              href="https://wa.me/5492612388045"
-              target="_blank"
-              rel="noopener noreferrer"
-              className={styles.btnPrimary}
-            >
-              Quiero una demo gratis
-            </a>
+               <a
+                  href="https://wa.me/5492612388045"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() =>
+                    trackEvent("whatsapp_click", {
+                      source: "demo_button",
+                      intent: "demo_request",
+                    })
+                  }
+                  className={styles.btnPrimary}
+                >
+                  Quiero una demo gratis
+                </a>
           </div>
         </section>
 

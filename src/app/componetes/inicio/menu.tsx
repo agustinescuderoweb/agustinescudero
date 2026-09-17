@@ -37,7 +37,7 @@ const toggleMenu = () => {
         </button>
       </div>
       <div className={`${styles.items} ${isOpen ? styles.show : ''}`}>
-        <Link href="/" className="text-black" title="Ir al inicio">Inicio</Link>
+        <Link href="/" className="!no-underline" style={{ color: 'rgba(240,237,232,0.7)' }} title="Ir al inicio">Inicio</Link>
         <div className={styles.dropdown}>
   <div
     className={styles.dropdownToggle}
@@ -85,20 +85,20 @@ const toggleMenu = () => {
   </div>
 
   <div className={`${styles.dropdownMenu} ${isDropdownOpen ? styles.dropdownVisible : ''}`}>
-    <Link href="/servicios/landing" className="!no-underline text-white/70 hover:text-black hover:bg-lime-400 transition-colors duration-200 px-4 py-2 block">
-      Landing Page
+    <Link href="/servicios/web-business" className="!no-underline text-white/70 hover:text-black hover:bg-lime-400 transition-colors duration-200 px-4 py-2 block">
+      Web Business
     </Link>
-    <Link href="/servicios/sitios" className="!no-underline text-white/70 hover:text-black hover:bg-lime-400 transition-colors duration-200 px-4 py-2 block">
-      Sitios Web
+    <Link href="/servicios/ecommerce-business" className="!no-underline text-white/70 hover:text-black hover:bg-lime-400 transition-colors duration-200 px-4 py-2 block">
+      Ecommerce Business
     </Link>
-    <Link href="/servicios/ecommerce" className="!no-underline text-white/70 hover:text-black hover:bg-lime-400 transition-colors duration-200 px-4 py-2 block">
-      Ecommerce
+    <Link href="/#desarrollo-a-medida" className="!no-underline text-white/70 hover:text-black hover:bg-lime-400 transition-colors duration-200 px-4 py-2 block">
+      Desarrollo a medida
     </Link>
   </div>
 </div>
-        <Link href="/ia" className="text-black !no-underline" title="Inteligencia Artificial">Inteligencia Artificial</Link>
-        <Link href="/portafolio" className="text-black !no-underline" title="Portafolio">Portafolio</Link>
-        <Link href="/blog" className="text-black !no-underline" title="Blog">Blog</Link>
+        <Link href="/ia" className="!no-underline" style={{ color: 'rgba(240,237,232,0.7)' }} title="Inteligencia Artificial">Inteligencia Artificial</Link>
+        <Link href="/portafolio" className="!no-underline" style={{ color: 'rgba(240,237,232,0.7)' }} title="Portafolio">Portafolio</Link>
+        <Link href="/blog" className="!no-underline" style={{ color: 'rgba(240,237,232,0.7)' }} title="Blog">Blog</Link>
         <Link href="/contactos" className="text-black !no-underline" title="Formulario de contacto">Contactos</Link>
       </div>
     </nav>

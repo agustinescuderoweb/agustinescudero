@@ -3,6 +3,7 @@ import Script from "next/script";
 import "./globals.css";
 import { Kanit } from 'next/font/google'
 import type { Metadata } from 'next'
+import WebIntelligenceTracker from "./components/WebIntelligenceTracker";
 
 const kanit = Kanit({
   subsets: ['latin'],
@@ -21,14 +22,15 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Diseño Web para Emprendedores | Agustín Escudero",
+  metadataBase: new URL("https://www.agustinescuderoweb.com"),
+  title: "Sitios Web y Tiendas Online Profesionales | Agustín Escudero",
   description:
-    "Desarrollo de páginas web, landing pages y tiendas online optimizadas para generar clientes.",
+    "Creamos sitios web y tiendas online profesionales para negocios que quieren generar clientes y vender por internet. Proceso claro, precio transparente.",
 
   openGraph: {
-    title: "Agustín Escudero | Desarrollo Web",
+    title: "Sitios Web y Tiendas Online Profesionales | Agustín Escudero",
     description:
-      "Creamos sitios web rápidos y optimizados para Google.",
+      "Creamos sitios web y tiendas online profesionales para negocios que quieren generar clientes y vender por internet.",
     url: "https://www.agustinescuderoweb.com",
     siteName: "Agustín Escudero",
     images: [
@@ -74,9 +76,23 @@ export default function RootLayout({
         `}
       </Script>
 
+      <Script id="organization-schema" type="application/ld+json" strategy="afterInteractive">
+        {JSON.stringify({
+          "@context": "https://schema.org",
+          "@type": "Organization",
+          name: "Agustín Escudero Web",
+          url: "https://www.agustinescuderoweb.com",
+          logo: "https://www.agustinescuderoweb.com/logo.png",
+          description:
+            "Desarrollo de sitios web y tiendas online profesionales para negocios que quieren generar clientes y vender por internet.",
+          areaServed: "AR",
+        })}
+      </Script>
+
       <body
         className={`${kanit.className} ${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <WebIntelligenceTracker />
         {children}
       </body>
     </html>

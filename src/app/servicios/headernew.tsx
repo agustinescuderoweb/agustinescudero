@@ -4,34 +4,34 @@ import React from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 
-import landing from '../../../public/landing.jpg'
 import sitio from '../../../public/sitio.jpg'
 import ecommerce from '../../../public/ecommer.jpg'
+import code from '../../../public/desarrollo-web.jpg'
 
 const servicios = [
   {
-    href: '/servicios/landing',
-    image: landing,
-    title: 'Landing Page',
-    tag: '01',
-    description: 'Optimizá tus conversiones con una landing enfocada en resultados.',
-    alt: 'Diseño de landing page profesional'
-  },
-  {
-    href: '/servicios/sitios',
+    href: '/servicios/web-business',
     image: sitio,
-    title: 'Sitio Web',
-    tag: '02',
-    description: 'Transmití profesionalismo con un sitio web moderno, rápido y adaptable.',
-    alt: 'Desarrollo de sitios web modernos'
+    title: 'Web Business',
+    tag: '01',
+    description: 'Presencia digital profesional pensada para generar consultas y clientes.',
+    alt: 'Sitio web profesional Web Business'
   },
   {
-    href: '/servicios/ecommerce',
+    href: '/servicios/ecommerce-business',
     image: ecommerce,
-    title: 'E-commerce',
+    title: 'Ecommerce Business',
+    tag: '02',
+    description: 'Tienda online lista para mostrar productos, cobrar y gestionar pedidos.',
+    alt: 'Tienda online Ecommerce Business'
+  },
+  {
+    href: '/#desarrollo-a-medida',
+    image: code,
+    title: 'Desarrollo a Medida',
     tag: '03',
-    description: 'Convertí visitantes en clientes con una tienda online rápida y segura.',
-    alt: 'Tienda online y ecommerce personalizada'
+    description: 'Sistemas, automatizaciones, APIs e integraciones a medida de tu negocio.',
+    alt: 'Desarrollo de software a medida'
   }
 ]
 
@@ -42,7 +42,7 @@ export default function HeaderServicios() {
         <Link
           key={index}
           href={servicio.href}
-          aria-label={`Ver servicio de ${servicio.title}`}
+          aria-label={`Ver ${servicio.title}`}
           className="relative group overflow-hidden"
         >
           {/* Imagen con zoom suave */}
@@ -57,14 +57,14 @@ export default function HeaderServicios() {
           {/* Overlay degradado oscuro — más profundo al hover */}
           <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/60 to-black/20 transition-all duration-500 group-hover:from-black/98 group-hover:via-black/70" />
 
-          {/* Línea verde superior — se expande al hover */}
-          <div className="absolute top-0 left-0 h-[2px] w-0 bg-[#a3e635] transition-all duration-500 ease-out group-hover:w-full z-20" />
+          {/* Línea de acento superior — se expande al hover */}
+          <div className="absolute top-0 left-0 h-[2px] w-0 bg-accent transition-all duration-500 ease-out group-hover:w-full z-20" />
 
           {/* Contenido */}
           <div className="absolute inset-0 z-10 flex flex-col justify-end px-8 pb-12 text-white">
 
             {/* Número de índice */}
-            <span className="text-[#a3e635] text-xs font-semibold tracking-[0.2em] uppercase mb-4 opacity-70">
+            <span className="text-accent text-xs font-semibold tracking-[0.2em] uppercase mb-4 opacity-70">
               {servicio.tag}
             </span>
 
@@ -79,7 +79,7 @@ export default function HeaderServicios() {
             </p>
 
             {/* CTA minimalista */}
-            <span className="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.15em] uppercase text-[#a3e635] transition-all duration-300 opacity-0 group-hover:opacity-100">
+            <span className="inline-flex items-center gap-2 text-xs font-semibold tracking-[0.15em] uppercase text-accent transition-all duration-300 opacity-0 group-hover:opacity-100">
               Ver más
               <svg
                 xmlns="http://www.w3.org/2000/svg"
