@@ -12,6 +12,8 @@ import pc from "../../public/pc.jpg"
 import meraki from "../../public/meraki.jpg"
 import analisis from "../../public/analisis.jpeg"
 import ferrari from "../../public/ferrari.jpg"
+import estudiantil from "../../public/pool.jpg"
+import recursos from "../../public/rrhh.jpg"
 
 export type ProyectoTipo = "web" | "ecommerce" | "personalizado"
 
@@ -24,6 +26,20 @@ export interface Proyecto {
 }
 
 export const proyectos: Proyecto[] = [
+   {
+    titulo: "Dashboard RRHH",
+    categoria: "Recursos Humanos",
+    tipo: "personalizado",
+    img: recursos,
+    url: "https://lantier-dashboard.vercel.app/",
+  },
+   {
+    titulo: "Web turismo",
+    categoria: "Turismo",
+    tipo: "web",
+    img: estudiantil,
+    url: "https://www.mendozaestudiantil.com.ar/",
+  },
   {
     titulo: "Asistente IA",
     categoria: "Chat Bot IA",
