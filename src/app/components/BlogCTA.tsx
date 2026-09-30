@@ -15,11 +15,11 @@ export default function BlogCTA() {
     ">
 
       {/* Acento decorativo */}
-      <div className="absolute top-0 left-0 right-0 h-[2px] bg-lime-400 rounded-t-2xl" />
+      <div className="absolute top-0 left-0 right-0 h-[2px] bg-accent rounded-t-2xl" />
 
       <div className="max-w-xl">
 
-        <span className="text-lime-400 text-xs font-semibold tracking-[0.18em] uppercase">
+        <span className="text-accent text-xs font-semibold tracking-[0.18em] uppercase">
           Potenciá tu negocio
         </span>
 
@@ -46,11 +46,11 @@ export default function BlogCTA() {
             }
             className="
               inline-flex items-center gap-2
-              bg-lime-400 text-black
+              bg-accent text-black
               px-6 py-3 rounded-[10px]
               text-sm font-semibold
               transition-all duration-200
-              hover:bg-lime-300 hover:text-black
+              hover:bg-accent-hover hover:text-black hover:shadow-glow
               hover:-translate-y-[2px]
               no-underline
             "
@@ -65,7 +65,7 @@ export default function BlogCTA() {
               px-6 py-3 rounded-[10px]
               text-sm font-medium
               transition-all duration-200
-              hover:border-lime-400/30 hover:text-white hover:-translate-y-[2px]
+              hover:border-accent/30 hover:text-white hover:-translate-y-[2px]
               !no-underline
             "
           >

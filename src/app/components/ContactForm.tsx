@@ -184,7 +184,7 @@ function ContactFormInner() {
       <button
         type="submit"
         disabled={status === "loading"}
-        className="mt-2 rounded-[10px] bg-accent px-6 py-3 text-sm font-semibold text-bg transition-all duration-200 hover:bg-accent-hover hover:-translate-y-0.5 disabled:opacity-60 disabled:hover:translate-y-0"
+        className="mt-2 rounded-[10px] bg-accent px-6 py-3 text-sm font-semibold text-bg transition-all duration-200 hover:bg-accent-hover hover:shadow-glow hover:-translate-y-0.5 disabled:opacity-60 disabled:hover:translate-y-0"
       >
         {status === "loading" ? "Enviando..." : "Quiero recibir una propuesta"}
       </button>

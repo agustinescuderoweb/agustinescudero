@@ -33,7 +33,7 @@ export default function Testimonios() {
 
         {/* Header */}
         <div className="mb-16">
-          <span className="text-lime-400 text-xs font-semibold tracking-[0.18em] uppercase">
+          <span className="text-accent text-xs font-semibold tracking-[0.18em] uppercase">
             Testimonios
           </span>
           <h2 className="mt-3 text-3xl md:text-[2rem] font-bold tracking-tight text-[#f0ede8] leading-tight">
@@ -54,7 +54,7 @@ export default function Testimonios() {
                 p-7
                 flex flex-col gap-6
                 transition-all duration-300
-                hover:border-lime-400/30
+                hover:border-accent/30
                 hover:-translate-y-1
               "
             >
@@ -66,7 +66,7 @@ export default function Testimonios() {
                     xmlns="http://www.w3.org/2000/svg"
                     viewBox="0 0 24 24"
                     fill="currentColor"
-                    className="w-4 h-4 text-lime-400"
+                    className="w-4 h-4 text-accent"
                   >
                     <path d="M12 2l2.9 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l7.1-1.01L12 2z" />
                   </svg>
@@ -85,7 +85,7 @@ export default function Testimonios() {
                   alt={`Testimonio de ${t.nombre}`}
                   width={40}
                   height={40}
-                  className="rounded-full object-cover ring-1 ring-lime-400/40"
+                  className="rounded-full object-cover ring-1 ring-accent/40"
                 />
                 <div className="flex flex-col">
                   <span className="text-sm font-semibold text-[#f0ede8] leading-tight">

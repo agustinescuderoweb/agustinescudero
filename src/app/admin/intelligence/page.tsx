@@ -115,13 +115,13 @@ export default function IntelligencePage() {
             type="password"
             value={apiKey}
             onChange={(e) => setApiKey(e.target.value)}
-            className="mb-4 w-full rounded-lg border border-zinc-700 bg-zinc-950 px-4 py-2 text-white outline-none focus:border-lime-400"
+            className="mb-4 w-full rounded-lg border border-zinc-700 bg-zinc-950 px-4 py-2 text-white outline-none focus:border-accent"
             autoFocus
           />
 
           <button
             type="submit"
-            className="w-full rounded-lg bg-lime-400 px-4 py-2 font-semibold text-zinc-950 transition hover:bg-lime-300"
+            className="w-full rounded-lg bg-accent px-4 py-2 font-semibold text-zinc-950 transition hover:bg-accent-hover"
           >
             Entrar
           </button>

@@ -62,7 +62,7 @@ export default function BlogPage() {
 
           {/* Header */}
           <div className="mb-14">
-            <span className="text-lime-400 text-xs font-semibold tracking-[0.18em] uppercase">
+            <span className="text-accent text-xs font-semibold tracking-[0.18em] uppercase">
               Blog
             </span>
             <h1 className="mt-3 text-4xl md:text-[2.8rem] font-bold tracking-tight text-[#f0ede8] leading-tight">
@@ -86,12 +86,12 @@ export default function BlogPage() {
                   rounded-2xl p-7
                   flex flex-col gap-4
                   transition-all duration-300
-                  hover:border-lime-400/30
+                  hover:border-accent/30
                   hover:-translate-y-1
                   !no-underline
                 "
               >
-                <span className="text-lime-400 text-xs font-semibold tracking-[0.15em] uppercase">
+                <span className="text-accent text-xs font-semibold tracking-[0.15em] uppercase">
                   {category.tag}
                 </span>
 
@@ -110,7 +110,7 @@ export default function BlogPage() {
                     strokeWidth="2"
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    className="text-lime-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex-shrink-0 mt-1"
+                    className="text-accent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex-shrink-0 mt-1"
                   >
                     <path d="M5 12h14M12 5l7 7-7 7" />
                   </svg>
@@ -121,7 +121,7 @@ export default function BlogPage() {
                 </p>
 
                 <div className="pt-2 border-t border-white/[0.05]">
-                  <span className="text-xs text-lime-400/60 font-medium group-hover:text-lime-400 transition-colors duration-200">
+                  <span className="text-xs text-accent/60 font-medium group-hover:text-accent transition-colors duration-200">
                     Ver artículos →
                   </span>
                 </div>

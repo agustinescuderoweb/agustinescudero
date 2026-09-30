@@ -60,7 +60,7 @@ export default async function CategoryPage({
 
           {/* Header */}
           <div className="mb-14 border-b border-white/[0.06] pb-14">
-            <span className="text-lime-400 text-xs font-semibold tracking-[0.18em] uppercase">
+            <span className="text-accent text-xs font-semibold tracking-[0.18em] uppercase">
               Blog
             </span>
             <h1 className="mt-3 text-4xl md:text-[2.8rem] font-bold tracking-tight text-[#f0ede8] capitalize leading-tight">
@@ -101,7 +101,7 @@ export default async function CategoryPage({
                 <div className="flex-1">
                   <h2 className="
                     text-lg md:text-xl font-semibold text-[#f0ede8] tracking-tight
-                    group-hover:text-lime-400 transition-colors duration-200
+                    group-hover:text-accent transition-colors duration-200
                   ">
                     {post.title}
                   </h2>
@@ -122,7 +122,7 @@ export default async function CategoryPage({
                   strokeLinecap="round"
                   strokeLinejoin="round"
                   className="
-                    text-lime-400 flex-shrink-0 mt-1
+                    text-accent flex-shrink-0 mt-1
                     opacity-0 group-hover:opacity-100
                     translate-x-[-4px] group-hover:translate-x-0
                     transition-all duration-200

@@ -17,7 +17,7 @@ export default function ProductCard({ product }: { product: Product }) {
       ref={ref}
       className={`relative flex flex-col rounded-2xl border p-8 transition-all duration-300 md:p-10 ${
         product.featured
-          ? "border-accent/30 bg-surface shadow-[0_0_0_1px_rgba(163,230,53,0.1),0_20px_60px_-20px_rgba(163,230,53,0.15)]"
+          ? "border-accent/30 bg-surface shadow-[0_0_0_1px_rgba(47, 155, 255,0.1),0_20px_60px_-20px_rgba(47, 155, 255,0.15)]"
           : "border-border bg-surface hover:border-white/15"
       }`}
     >

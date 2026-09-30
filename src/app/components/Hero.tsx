@@ -6,7 +6,7 @@ export default function Hero() {
     <section className="relative overflow-hidden bg-bg pt-40 pb-28 px-6">
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_60%_at_50%_-10%,rgba(163,230,53,0.14),transparent)]"
+        className="hero-glow pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_60%_50%_at_50%_45%,rgba(47,155,255,0.28)_0%,rgba(0,200,255,0.10)_35%,transparent_70%)] max-md:bg-[radial-gradient(ellipse_100%_45%_at_50%_45%,rgba(47,155,255,0.28)_0%,rgba(0,200,255,0.10)_35%,transparent_70%)]"
       />
       <div
         aria-hidden

@@ -27,7 +27,7 @@ export default function CTASection({
     <section className="relative overflow-hidden border-t border-border bg-bg px-6 py-28">
       <div
         aria-hidden
-        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_70%_60%_at_50%_50%,rgba(163,230,53,0.1),transparent)]"
+        className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_70%_60%_at_50%_50%,rgba(47, 155, 255,0.1),transparent)]"
       />
 
       <div className="relative mx-auto flex max-w-3xl flex-col items-center gap-6 text-center">

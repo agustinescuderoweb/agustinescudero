@@ -1,6 +1,6 @@
 ---
 name: agustin-web-ux-cro
-description: Design system, copywriting rules and conversion (CRO) conventions for agustinescuderoweb.com. Use whenever creating or editing pages/components on this site — home, /servicios, /portafolio, /contactos, nuevas secciones, cards, CTAs, formularios — so new work stays consistent with the existing dark/lime SaaS-style design and commercial positioning instead of drifting back into a generic "portfolio de freelancer" look.
+description: Design system, copywriting rules and conversion (CRO) conventions for agustinescuderoweb.com. Use whenever creating or editing pages/components on this site — home, /servicios, /portafolio, /contactos, nuevas secciones, cards, CTAs, formularios — so new work stays consistent with the existing dark/neon-blue SaaS-style design and commercial positioning instead of drifting back into a generic "portfolio de freelancer" look.
 ---
 
 # Agustín Escudero Web — UX, diseño y CRO
@@ -31,12 +31,12 @@ Definidos en `src/app/globals.css` vía `@theme` (Tailwind v4):
 --color-bg: #0a0a0a       /* bg-bg */
 --color-surface: #111111  /* bg-surface — cards */
 --color-ink: #f0ede8      /* text-ink, text-ink/60, text-ink/40... */
---color-accent: #a3e635   /* bg-accent, text-accent, border-accent */
+--color-accent: #2F9BFF   /* bg-accent, text-accent, border-accent */
 --color-accent-hover: #bef264
 --color-border: rgba(255,255,255,0.08) /* border-border — hairlines */
 ```
 
-Antes de este rediseño había 3 verdes distintos en el sitio (`#a3e635`,
+Antes de este rediseño había 3 verdes distintos en el sitio (`#2F9BFF`,
 `#32cd32`, `rgb(50,205,50)`). Si aparece un hex nuevo para "verde/acento" en
 código viejo que se toque, migrarlo a `text-accent`/`bg-accent`/`border-accent`.
 

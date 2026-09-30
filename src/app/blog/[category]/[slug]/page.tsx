@@ -54,7 +54,7 @@ export default async function PostPage({
           </div>
 
           {/* Categoría */}
-          <span className="text-lime-400 text-xs font-semibold tracking-[0.18em] uppercase">
+          <span className="text-accent text-xs font-semibold tracking-[0.18em] uppercase">
             {post.category}
           </span>
 
@@ -104,13 +104,13 @@ export default async function PostPage({
               prose-li:text-white/55
               prose-li:leading-relaxed
 
-              prose-blockquote:border-l-lime-400
+              prose-blockquote:border-l-accent
               prose-blockquote:border-l-2
               prose-blockquote:text-white/40
               prose-blockquote:not-italic
               prose-blockquote:pl-5
 
-              prose-code:text-lime-400
+              prose-code:text-accent
               prose-code:bg-white/[0.05]
               prose-code:px-1.5
               prose-code:py-0.5

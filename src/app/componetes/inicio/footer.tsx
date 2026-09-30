@@ -23,7 +23,7 @@ export default function Footer() {
         <div className="flex flex-row gap-12 text-sm">
 
           <ul className="flex flex-col gap-3">
-            <li className="text-[0.7rem] font-semibold tracking-[0.15em] uppercase text-lime-400 mb-1">
+            <li className="text-[0.7rem] font-semibold tracking-[0.15em] uppercase text-accent mb-1">
               Contacto
             </li>
             <li>
@@ -39,7 +39,7 @@ export default function Footer() {
               <a
                 href="https://wa.link/elp2e3"
                 title="Contactar vía WhatsApp con Agustín Escudero"
-                className="text-white/50 hover:text-lime-400 transition-colors duration-200 !no-underline"
+                className="text-white/50 hover:text-accent transition-colors duration-200 !no-underline"
               >
                 WhatsApp
               </a>
@@ -47,7 +47,7 @@ export default function Footer() {
           </ul>
 
           <ul className="flex flex-col gap-3">
-            <li className="text-[0.7rem] font-semibold tracking-[0.15em] uppercase text-lime-400 mb-1">
+            <li className="text-[0.7rem] font-semibold tracking-[0.15em] uppercase text-accent mb-1">
               Redes
             </li>
             <li>

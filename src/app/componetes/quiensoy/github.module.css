@@ -13,7 +13,7 @@
 }
 
 .subtitulo {
-  color: #a3e635;
+  color: #2F9BFF;
   text-transform: uppercase;
   letter-spacing: 1px;
 }
@@ -27,7 +27,7 @@
 .button {
   display: inline-block;
   margin-top: 2rem;
-  background: #a3e635;
+  background: #2F9BFF;
   color: #0a0a0a;
   padding: 14px 28px;
   border-radius: 8px;
@@ -36,7 +36,7 @@
 }
 
 .button:hover {
-  background: #bef264;
+  background: #00C8FF;
 }
 
 .button:hover {

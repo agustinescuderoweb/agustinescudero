@@ -61,8 +61,8 @@ const toggleMenu = () => {
         width: '20px',
         height: '20px',
         borderRadius: '6px',
-        background: 'rgba(163, 230, 53, 0.12)',
-        border: '0.5px solid rgba(163, 230, 53, 0.3)',
+        background: 'rgba(47, 155, 255, 0.12)',
+        border: '0.5px solid rgba(47, 155, 255, 0.3)',
         flexShrink: 0,
         transition: 'transform 0.2s ease',
         transform: isDropdownOpen ? 'rotate(180deg)' : 'rotate(0deg)',
@@ -74,7 +74,7 @@ const toggleMenu = () => {
         height="10"
         viewBox="0 0 24 24"
         fill="none"
-        stroke="#a3e635"
+        stroke="#2F9BFF"
         strokeWidth="3"
         strokeLinecap="round"
         strokeLinejoin="round"
@@ -85,13 +85,13 @@ const toggleMenu = () => {
   </div>
 
   <div className={`${styles.dropdownMenu} ${isDropdownOpen ? styles.dropdownVisible : ''}`}>
-    <Link href="/servicios/web-business" className="!no-underline text-white/70 hover:text-black hover:bg-lime-400 transition-colors duration-200 px-4 py-2 block">
+    <Link href="/servicios/web-business" className="!no-underline text-white/70 hover:text-black hover:bg-accent transition-colors duration-200 px-4 py-2 block">
       Web Business
     </Link>
-    <Link href="/servicios/ecommerce-business" className="!no-underline text-white/70 hover:text-black hover:bg-lime-400 transition-colors duration-200 px-4 py-2 block">
+    <Link href="/servicios/ecommerce-business" className="!no-underline text-white/70 hover:text-black hover:bg-accent transition-colors duration-200 px-4 py-2 block">
       Ecommerce Business
     </Link>
-    <Link href="/#desarrollo-a-medida" className="!no-underline text-white/70 hover:text-black hover:bg-lime-400 transition-colors duration-200 px-4 py-2 block">
+    <Link href="/#desarrollo-a-medida" className="!no-underline text-white/70 hover:text-black hover:bg-accent transition-colors duration-200 px-4 py-2 block">
       Desarrollo a medida
     </Link>
   </div>

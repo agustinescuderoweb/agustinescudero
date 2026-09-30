@@ -6,9 +6,24 @@
   --color-bg: #0a0a0a;
   --color-surface: #111111;
   --color-ink: #f0ede8;
-  --color-accent: #a3e635;
-  --color-accent-hover: #bef264;
+  --color-accent: #2F9BFF;
+  --color-accent-hover: #00C8FF;
+  --color-navy: #0a2540;
   --color-border: rgba(255, 255, 255, 0.08);
+  --shadow-glow: 0 0 20px rgba(0, 200, 255, 0.45);
+}
+
+@keyframes hero-breathe {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 1; }
+}
+
+.hero-glow {
+  animation: hero-breathe 6s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-glow { animation: none; }
 }
 
 body {

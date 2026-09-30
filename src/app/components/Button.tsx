@@ -22,9 +22,9 @@ interface ButtonProps {
 
 const variantClasses: Record<Variant, string> = {
   primary:
-    "bg-accent text-bg hover:bg-accent-hover hover:-translate-y-0.5",
+    "bg-accent text-bg hover:bg-accent-hover hover:shadow-glow hover:-translate-y-0.5",
   outline:
-    "border border-white/15 text-ink hover:border-accent/50 hover:bg-accent/5",
+    "border border-navy text-ink hover:border-accent-hover hover:bg-accent/5 hover:shadow-glow",
   ghost: "text-ink/70 hover:text-ink",
 }
 
