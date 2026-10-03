@@ -8,6 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/servicios",
     "/servicios/web-business",
     "/servicios/ecommerce-business",
+    "/turismo",
     "/portafolio",
     "/contactos",
     "/ia",
